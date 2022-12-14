@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "christian-kohler.npm-intellisense",
+    "PKief.material-icon-theme",
+    "xabikos.JavaScriptSnippets",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "wix.vscode-import-cost",
+    "ecmel.vscode-html-css",
+    "dsznajder.es7-react-js-snippets",
+    "mgmcdermott.vscode-language-babel"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "package": {
+    "dependencies": {
+      "eslint-plugin-jsx-a11y": "^6.2.3",
+      "serve": "^11.2.0"
+    },
+    "scripts": {
+      "serve": "serve -s build",
+      "build-and-serve": "npm run build && npm run serve"
+    },
+    "eslintConfig": {
+      "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+      "plugins": ["jsx-a11y"]
+    }
+  },
+  "configurations": [
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach to Chrome",
+      "port": 3000,
+      "request": "attach",
+      "type": "chrome",
+      "urlFilter": "http://localhost:3000/*", // use urlFilter instead of url!
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
