@@ -1,1 +1,1 @@
-import './colors.scss';
+export * from './colors.scss';
