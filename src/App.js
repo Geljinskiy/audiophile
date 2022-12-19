@@ -21,7 +21,10 @@ function App() {
           {/* <Route path={ROUTES.product} element={<div>product page</div>} /> */}
         </Route>
       </Routes>
-      {/*//!! <MainButton>blblbllb</MainButton> */}
+      <MainButton btnStyle="invisible">blblbllb</MainButton>
+      <MainButton btnStyle="light">blblbllb</MainButton>
+      <MainButton btnStyle="dark">blblbllb</MainButton>
+      <MainButton btnStyle="color">blblbllb</MainButton>
     </>
   );
 }

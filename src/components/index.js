@@ -1,2 +1,2 @@
 export * from './SharedLayout';
-export * from './MainButton';
+export * from './common/MainButton';
