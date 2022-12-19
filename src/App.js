@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { SharedLayout } from 'components';
+import { MainButton, SharedLayout } from 'components';
 
 import './index.css';
 import { ROUTES } from 'utils';
@@ -21,6 +21,7 @@ function App() {
           {/* <Route path={ROUTES.product} element={<div>product page</div>} /> */}
         </Route>
       </Routes>
+      {/*//!! <MainButton>blblbllb</MainButton> */}
     </>
   );
 }
