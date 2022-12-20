@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { MainButton, SharedLayout } from 'components';
+import { SharedLayout } from 'components';
 
 import { ROUTES } from 'utils';
 
@@ -23,10 +23,6 @@ function App() {
           {/* <Route path={ROUTES.product} element={<div>product page</div>} /> */}
         </Route>
       </Routes>
-      <MainButton btnStyle="invisible">blblbllb</MainButton>
-      <MainButton btnStyle="light">blblbllb</MainButton>
-      <MainButton btnStyle="dark">blblbllb</MainButton>
-      <MainButton btnStyle="color">blblbllb</MainButton>
     </>
   );
 }
