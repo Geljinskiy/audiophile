@@ -1,5 +1,30 @@
 @import-normalize;
 
+/* fonts */
+
+@font-face {
+  font-family: 'ManropeBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('assets/fonts/Manrope-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ManropeMedium';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''), url('assets/fonts/Manrope-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ManropeRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('assets/fonts/Manrope-Regular.ttf') format('truetype');
+}
+
+/* style resetting */
+
 body {
   font-family: sans-serif;
   line-height: 1.5;
