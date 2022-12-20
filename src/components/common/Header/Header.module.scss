@@ -1,0 +1,10 @@
+@import 'styles/colors';
+
+.header{
+    height: 100px;
+    background-color: $dark;
+    color: $light;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
