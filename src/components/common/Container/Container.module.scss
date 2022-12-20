@@ -1,0 +1,20 @@
+@import 'styles/index.scss';
+
+.container {
+  margin: 0 auto;
+
+  @include mediaUpTo('tablet') {
+    width: getBreakpointValue('mobile');
+    padding: 0 getLRPValue('mobile');
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    width: (getBreakpointValue('tablet'));
+    padding: 0 getLRPValue('tablet');
+  }
+
+  @include mediaOver('desktop') {
+    width: (getBreakpointValue('desktop'));
+    padding: 0 getLRPValue('desktop');
+  }
+}
