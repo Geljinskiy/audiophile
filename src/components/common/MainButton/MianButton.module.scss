@@ -1,6 +1,6 @@
 @import '../../../styles/variables/colors';
 
-@mixin suitable-color($color, $bgColor, $bordColor: #000) {
+@mixin suitable-color($color, $bgColor, $bordColor: $black) {
   color: $color;
   background-color: $bgColor;
   border-color: $bordColor;
@@ -25,34 +25,34 @@
 }
 
 .dark {
-  @include suitable-color(#fff, #000);
+  @include suitable-color($white, $black);
 
   &:hover {
-    @include suitable-color(#000, transparent);
+    @include suitable-color($black, transparent);
   }
 }
 
 .light {
-  @include suitable-color(#000, transparent);
+  @include suitable-color($black, transparent);
 
   &:hover {
-    @include suitable-color(#fff, #000);
+    @include suitable-color($white, $black);
   }
 }
 
 .color {
-  @include suitable-color(#fff, #d87d4a, #d87d4a);
+  @include suitable-color($white, $main-color, $main-color);
 
   &:hover {
-    @include suitable-color(#fff, #fbaf85, #fbaf85);
+    @include suitable-color($white, $secondary-color, $secondary-color);
   }
 }
 
 .invisible {
-  @include suitable-color(#000, transparent);
+  @include suitable-color($black, transparent);
 
   border: none;
   &:hover {
-    color: #d87d4a;
+    color: $main-color;
   }
 }

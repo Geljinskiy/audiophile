@@ -26,7 +26,7 @@ function App() {
       <MainButton btnStyle={'dark'}>Some text</MainButton>
       <MainButton btnStyle={'light'}>Some text</MainButton>
       <MainButton btnStyle={'color'}>Some text</MainButton>
-      <MainButton btnStyle={'invible'}>Some text</MainButton>
+      <MainButton btnStyle={'invisible'}>Some text</MainButton>
     </>
   );
 }
