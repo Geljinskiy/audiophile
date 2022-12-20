@@ -1,0 +1,51 @@
+@mixin suitable-color($color, $bgColor, $bordColor: #000) {
+  color: $color;
+  background-color: $bgColor;
+  border-color: $bordColor;
+}
+
+.button {
+  height: 48px;
+  min-width: 160px;
+
+  padding: 0 18px;
+  margin: 0;
+  border: 1px solid;
+
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.dark {
+  @include suitable-color(#fff, #000);
+
+  &:hover {
+    @include suitable-color(#000, transparent);
+  }
+}
+
+.light {
+  @include suitable-color(#000, transparent);
+
+  &:hover {
+    @include suitable-color(#fff, #000);
+  }
+}
+
+.color {
+  @include suitable-color(#fff, #d87d4a, #d87d4a);
+
+  &:hover {
+    @include suitable-color(#fff, #fbaf85, #fbaf85);
+  }
+}
+
+.invisible {
+  @include suitable-color(#000, transparent);
+
+  border: none;
+  &:hover {
+    color: #d87d4a;
+  }
+}
