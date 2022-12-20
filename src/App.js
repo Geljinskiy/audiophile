@@ -13,6 +13,7 @@ function App() {
             index
             element={<div style={{ fontFamily: 'ManropeBold' }}>Home page</div>}
           />
+          style={{ fontFamily: 'ManropeBold' }}
           <Route
             path={ROUTES.headphones}
             element={<div>headphones page</div>}
