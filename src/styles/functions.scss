@@ -1,0 +1,7 @@
+@function getBreakpointValue($bpName) {
+  @return map-get($breakpoints, $bpName);
+}
+
+@function getLRPValue($bpName) {
+  @return map-get($containerLRPaddings, $bpName);
+}
