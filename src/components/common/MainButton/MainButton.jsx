@@ -1,17 +1,18 @@
-import styles from './MianButton.module.scss';
 import PropTypes from 'prop-types';
 
-const MainButton = ({ btnStyle, btnType="button", children }) => {
+import styles from './MianButton.module.scss';
+
+const Button = ({ style, type = 'button', children }) => {
   return (
-    <button type={btnType} className={`${styles.button} ${styles[btnStyle]}`}>
+    <button type={type} className={`${styles.button} ${styles[style]}`}>
       {children}
     </button>
   );
 };
 
-MainButton.propTypes = {
-  btnStyle: PropTypes.string.isRequired,
-  btnType: PropTypes.string,
+Button.propTypes = {
+  style: PropTypes.string.isRequired,
+  type: PropTypes.string,
 };
 
-export default MainButton;
+export default Button;
