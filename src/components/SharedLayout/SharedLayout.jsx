@@ -1,3 +1,4 @@
+import { Container } from 'components';
 import { Outlet } from 'react-router-dom';
 
 const SharedLayout = () => {
