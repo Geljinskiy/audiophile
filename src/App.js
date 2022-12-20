@@ -9,10 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path={ROUTES.home} element={<SharedLayout />}>
-          <Route
-            index
-            element={<div style={{ fontFamily: 'ManropeBold' }}>Home page</div>}
-          />
+          <Route index element={<div>Home page</div>} />
           <Route
             path={ROUTES.headphones}
             element={<div>headphones page</div>}
