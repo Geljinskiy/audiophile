@@ -1,0 +1,58 @@
+@import 'styles/colors';
+
+@mixin suitable-color($color, $bgColor, $bordColor: $dark) {
+  color: $color;
+  background-color: $bgColor;
+  border-color: $bordColor;
+}
+
+.button {
+  height: 48px;
+  min-width: 160px;
+
+  padding: 0 18px;
+  margin: 0;
+  border: 1px solid;
+  font-family: 'ManropeBold';
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.dark {
+  @include suitable-color($light, $dark);
+
+  &:hover {
+    @include suitable-color($dark, transparent);
+  }
+}
+
+.light {
+  @include suitable-color($dark, transparent);
+
+  &:hover {
+    @include suitable-color($light, $dark);
+  }
+}
+
+.color {
+  @include suitable-color($light, $main-color, $main-color);
+
+  &:hover {
+    @include suitable-color($light, $secondary-color, $secondary-color);
+  }
+}
+
+.invisible {
+  @include suitable-color($dark, transparent);
+
+  border: none;
+  &:hover {
+    color: $main-color;
+  }
+}

@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { SharedLayout } from 'components';
+import { Home } from 'pages';
 
 import { ROUTES } from 'utils';
 
@@ -9,10 +10,7 @@ function App() {
     <>
       <Routes>
         <Route path={ROUTES.home} element={<SharedLayout />}>
-          <Route
-            index
-            element={<div style={{ fontFamily: 'ManropeBold' }}>Home page</div>}
-          />
+          <Route index element={<Home />} />
           <Route
             path={ROUTES.headphones}
             element={<div>headphones page</div>}
