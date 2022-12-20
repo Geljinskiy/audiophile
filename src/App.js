@@ -4,7 +4,6 @@ import { SharedLayout } from 'components';
 
 import './index.css';
 import { ROUTES } from 'utils';
-import MainButton from 'components/common/MainButton';
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
           {/* <Route path={ROUTES.product} element={<div>product page</div>} /> */}
         </Route>
       </Routes>
-      <MainButton>See propduct</MainButton>
     </>
   );
 }
