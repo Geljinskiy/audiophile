@@ -1,3 +1,5 @@
+@import '../../../styles/variables/colors';
+
 @mixin suitable-color($color, $bgColor, $bordColor: #000) {
   color: $color;
   background-color: $bgColor;
