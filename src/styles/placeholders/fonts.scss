@@ -5,42 +5,42 @@
 }
 
 %h1-font {
-  @include %h-font;
+  @extend %h-font;
   font-size: 56px;
   line-height: 1.03;
   letter-spacing: 2px;
 }
 
 %h2-font {
-  @include %h-font;
+  @extend %h-font;
   font-size: 40px;
   line-height: 1.1;
   letter-spacing: 1.5px;
 }
 
 %h3-font {
-  @include %h-font;
+  @extend %h-font;
   font-size: 32px;
   line-height: 1.12;
   letter-spacing: 1.15px;
 }
 
 %h4-font {
-  @include %h-font;
+  @extend %h-font;
   font-size: 28px;
   line-height: 1.35;
   letter-spacing: 2px;
 }
 
 %h5-font {
-  @include %h-font;
+  @extend %h-font;
   font-size: 24px;
   line-height: 1.37;
   letter-spacing: 1.7px;
 }
 
 %h6-font {
-  @include %h-font;
+  @extend %h-font;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 1.3px;
@@ -55,7 +55,7 @@
 }
 
 %sub-title-font {
-  @include %h-font;
+  @extend %h-font;
   font-size: 13px;
   line-height: 1.92;
   letter-spacing: 1px;
