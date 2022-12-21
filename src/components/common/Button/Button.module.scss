@@ -1,4 +1,4 @@
-@import 'styles/colors';
+@import 'styles/index.scss';
 
 @mixin suitable-color($color, $bgColor, $bordColor: $dark) {
   color: $color;
