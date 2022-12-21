@@ -1,0 +1,29 @@
+@import 'styles/index.scss';
+
+.social_link__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  list-style-type: none;
+
+  @include mediaOver('desktop') {
+    position: relative;
+  }
+  top: -70px;
+  transform: translateY(-50%);
+}
+
+.social_link__link {
+  fill: $light;
+
+  transition: createTransitionFor('fill');
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: $main-color;
+  }
+}

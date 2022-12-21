@@ -5,3 +5,24 @@
 @function getLRPValue($bpName) {
   @return map-get($containerLRPaddings, $bpName);
 }
+
+@function createTransitionFor(
+  $types,
+  $duration: getTransitionData('time'),
+  $timeFunction: getTransitionData('timeFunction')
+) {
+  $compoundValue: '';
+
+  @each $type in $types {
+    $compoundValue: #{$compoundValue} #{$type} #{$duration} #{$timeFunction};
+    @if $type != nth($types, -1) {
+      $compoundValue: #{$compoundValue}',';
+    }
+  }
+
+  @return $compoundValue;
+}
+
+@function getTransitionData($dataName) {
+  @return map-get($transitionData, $dataName);
+}

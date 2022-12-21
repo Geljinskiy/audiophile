@@ -1,0 +1,104 @@
+@import 'styles/index.scss';
+
+.footer {
+  background-color: $main-dark-color;
+}
+
+.footer__container {
+  &::before {
+    position: relative;
+
+    display: block;
+    width: 100px;
+    height: 4px;
+    box-sizing: border-box;
+
+    background-color: $main-color;
+
+    content: '';
+  }
+
+  @include mediaUpTo('tablet') {
+    $padding-top: 48px;
+
+    padding-top: $padding-top;
+    padding-bottom: 38px;
+
+    &::before {
+      top: -$padding-top;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    $padding-top: 60px;
+
+    padding-top: $padding-top;
+    padding-bottom: 46px;
+
+    &::before {
+      top: -$padding-top;
+      left: 0;
+    }
+  }
+
+  @include mediaOver('desktop') {
+    $padding-top: 75px;
+
+    padding-top: $padding-top;
+    padding-bottom: 48px;
+
+    &::before {
+      top: -$padding-top;
+      left: 0;
+    }
+  }
+}
+
+.footer__text {
+  color: $light;
+
+  opacity: 0.5;
+
+  @include mediaUpTo('tablet') {
+    text-align: center;
+  }
+}
+
+.footer__about_us {
+  @extend %body-font;
+  font-weight: 500;
+
+  @include mediaUpTo('tablet') {
+    margin-bottom: 48px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 80px;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 56px;
+
+    width: 540px;
+  }
+}
+
+.footer__bottom_wrapper {
+  display: flex;
+
+  @include mediaUpTo('tablet') {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  @include mediaOver('tablet') {
+    justify-content: space-between;
+  }
+}
+
+.footer__copyright {
+  @extend %body-font;
+  font-weight: 700;
+}
