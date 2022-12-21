@@ -10,10 +10,8 @@
   list-style-type: none;
 
   @include mediaOver('desktop') {
-    position: relative;
+    order: 2;
   }
-  top: -70px;
-  transform: translateY(-50%);
 }
 
 .social_link__link {

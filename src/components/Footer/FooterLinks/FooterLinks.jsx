@@ -8,7 +8,7 @@ import { ReactComponent as Logo } from 'assets/icons/logo.svg';
 
 const FooterLinks = () => {
   return (
-    <div className={css.footer__top_wrapper}>
+    <div className={css.footer__wrapper}>
       <div className={css.footer__logo}>
         <Logo />
       </div>

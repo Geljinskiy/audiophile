@@ -1,0 +1,42 @@
+@import 'styles/index.scss';
+
+.footer__text {
+  color: $light;
+
+  opacity: 0.5;
+
+  @include mediaUpTo('tablet') {
+    text-align: center;
+  }
+}
+
+.footer__about_us {
+  display: inline-flex;
+
+  @extend %body-font;
+  font-weight: 500;
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 80px;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 56px;
+    margin-right: 466px;
+    order: 1;
+
+    width: 540px;
+  }
+}
+
+.footer__copyright {
+  display: inline-flex;
+  justify-content: center;
+
+  @extend %body-font;
+  font-weight: 700;
+
+  @include mediaOver('desktop') {
+    order: 3;
+  }
+}

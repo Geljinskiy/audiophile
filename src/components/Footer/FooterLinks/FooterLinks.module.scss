@@ -1,6 +1,6 @@
 @import 'styles/index.scss';
 
-.footer__top_wrapper {
+.footer__wrapper {
   display: flex;
 
   @include mediaUpTo('tablet') {
