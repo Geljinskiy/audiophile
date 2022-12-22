@@ -21,6 +21,9 @@
   text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
+
+  transition: createTransitionFor('color'),
+    createTransitionFor('background-color');
 }
 
 .dark {
@@ -47,10 +50,11 @@
   }
 }
 
-.invisible {
+.transparent {
   @include suitable-color($dark, transparent);
 
   border: none;
+
   &:hover {
     color: $main-color;
   }

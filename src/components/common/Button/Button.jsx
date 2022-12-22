@@ -2,16 +2,26 @@ import PropTypes from 'prop-types';
 
 import styles from './Button.module.scss';
 
-const Button = ({ style, type = 'button', children }) => {
+/**
+ * **Styled button according to Design System**
+ *
+ * @example
+ * <Button styling={"dark" | "light" | "color" | "transparent"} type={"button" | "submit"}>
+ *    {children}
+ * </Button>
+ *
+ * **/
+const Button = ({ styling, type = 'button', children }) => {
   return (
-    <button type={type} className={`${styles.button} ${styles[style]}`}>
+    <button type={type} className={`${styles.button} ${styles[styling]}`}>
       {children}
     </button>
   );
 };
 
 Button.propTypes = {
-  style: PropTypes.string.isRequired,
+  styling: PropTypes.oneOf(['dark', 'light', 'color', 'transparent'])
+    .isRequired,
   type: PropTypes.string,
 };
 

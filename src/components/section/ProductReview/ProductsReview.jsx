@@ -1,4 +1,4 @@
-import { Section } from 'components/common';
+import { Button, Section } from 'components';
 
 // import css from './ProductsReview.module.scss';
 
@@ -7,10 +7,17 @@ const ProductsReview = () => {
     <Section>
       <div>
         ZX9 speaker Upgrade to premium speakers that are phenomenally built to
-        deliver truly remarkable sound. See product
+        deliver truly remarkable sound.
+        <Button styling="dark">See product</Button>
       </div>
-      <div>ZX7 speaker See product</div>
-      <div>YX1 earphones See product</div>
+      <div>
+        ZX7 speaker
+        <Button styling="light">See product</Button>
+      </div>
+      <div>
+        YX1 earphones
+        <Button styling="light">See product</Button>
+      </div>
     </Section>
   );
 };
