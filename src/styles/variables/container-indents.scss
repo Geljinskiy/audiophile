@@ -9,3 +9,8 @@ $containerLRPaddings: (
   'tablet': 40px,
   'desktop': 165px,
 );
+
+$transitionData: (
+  'time': 250ms,
+  'timeFunction': cubic-bezier(0.4, 0, 0.2, 1),
+);
