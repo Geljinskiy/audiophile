@@ -4,7 +4,7 @@ import { ROUTES } from 'utils';
 
 import css from './FooterLinks.module.scss';
 
-import { ReactComponent as Logo } from 'assets/icons/logo.svg';
+import { Logo } from 'assets';
 
 const FooterLinks = () => {
   return (

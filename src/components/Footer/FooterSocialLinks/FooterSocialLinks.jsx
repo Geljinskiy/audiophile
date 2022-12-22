@@ -1,9 +1,7 @@
 import css from './FooterSocialLinks.module.scss';
 
 // icons
-import { ReactComponent as InstagramIcon } from 'assets/icons/instagram.svg';
-import { ReactComponent as FacebookIcon } from 'assets/icons/facebook.svg';
-import { ReactComponent as TwitterIcon } from 'assets/icons/twitter.svg';
+import { InstagramIcon, FacebookIcon, TwitterIcon } from 'assets';
 
 const FooterSocialLinks = () => {
   return (
