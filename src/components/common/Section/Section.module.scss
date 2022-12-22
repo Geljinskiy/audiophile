@@ -1,0 +1,15 @@
+@import 'styles/index.scss';
+
+.section {
+  @include mediaUpTo('tablet') {
+    margin-bottom: 120px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 96px;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 200px;
+  }
+}

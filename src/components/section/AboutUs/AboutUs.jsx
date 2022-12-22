@@ -1,13 +1,13 @@
-import { AboutUsDescription, AboutUsImage } from 'components';
+import { Section, AboutUsDescription, AboutUsImage } from 'components';
 
 import css from './AboutUs.module.scss';
 
 const AboutUs = () => {
   return (
-    <section className={css.section}>
+    <Section className={css.section}>
       <AboutUsImage />
       <AboutUsDescription />
-    </section>
+    </Section>
   );
 };
 
