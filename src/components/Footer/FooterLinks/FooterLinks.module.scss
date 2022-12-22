@@ -1,0 +1,65 @@
+@import 'styles/index.scss';
+
+.footer__top_wrapper {
+  display: flex;
+
+  @include mediaUpTo('tablet') {
+    margin-bottom: 48px;
+
+    gap: 48px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 32px;
+
+    gap: 32px;
+  }
+
+  @include mediaUpTo('desktop') {
+    flex-direction: column;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 36px;
+
+    justify-content: space-between;
+  }
+}
+
+.footer__logo {
+  @include mediaUpTo('tablet') {
+    text-align: center;
+  }
+}
+
+.link_list {
+  display: flex;
+
+  list-style-type: none;
+
+  @include mediaUpTo('tablet') {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @include mediaOver('tablet') {
+    gap: 34px;
+  }
+}
+
+.link_list__link {
+  display: block;
+
+  @extend %sub-title-font;
+  text-decoration: none;
+  color: $light;
+  text-align: center;
+
+  transition: createTransitionFor('color');
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $main-color;
+  }
+}

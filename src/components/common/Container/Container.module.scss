@@ -1,20 +1,24 @@
 @import 'styles/index.scss';
 
 .container {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 
   @include mediaUpTo('tablet') {
     width: getBreakpointValue('mobile');
-    padding: 0 getLRPValue('mobile');
+    padding-right: getLRPValue('mobile');
+    padding-left: getLRPValue('mobile');
   }
 
   @include mediaInBetween('tablet', 'desktop') {
     width: (getBreakpointValue('tablet'));
-    padding: 0 getLRPValue('tablet');
+    padding-right: getLRPValue('tablet');
+    padding-left: getLRPValue('tablet');
   }
 
   @include mediaOver('desktop') {
     width: (getBreakpointValue('desktop'));
-    padding: 0 getLRPValue('desktop');
+    padding-right: getLRPValue('desktop');
+    padding-left: getLRPValue('desktop');
   }
 }
