@@ -1,4 +1,4 @@
-@import 'styles/variables/colors';
+@import 'styles/index.scss';
 
 @mixin suitable-color($color, $bgColor, $bordColor: $dark) {
   color: $color;
@@ -14,7 +14,6 @@
   margin: 0;
   border: 1px solid;
   font-family: 'ManropeBold';
-
   display: flex;
   align-items: center;
   justify-content: center;

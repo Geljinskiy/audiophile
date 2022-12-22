@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import styles from './MianButton.module.scss';
+import styles from './Button.module.scss';
 
 const Button = ({ style, type = 'button', children }) => {
   return (
