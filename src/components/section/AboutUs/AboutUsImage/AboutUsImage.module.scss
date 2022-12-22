@@ -1,0 +1,17 @@
+@import 'styles/index.scss';
+
+.img_thumb {
+  @include mediaUpTo('tablet') {
+    margin-bottom: 40px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 64px;
+  }
+}
+
+.img {
+  border-radius: 8px;
+
+  background-color: $secondary-light-color;
+}

@@ -1,7 +1,9 @@
+import { AboutUs } from 'components';
+
 const Home = () => {
   return (
     <>
-      <div>Home page</div>
+      <AboutUs />
     </>
   );
 };

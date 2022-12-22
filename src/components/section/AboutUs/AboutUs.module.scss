@@ -1,0 +1,21 @@
+@import 'styles/index.scss';
+
+.section {
+  @include mediaUpTo('tablet') {
+    margin-bottom: 120px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 96px;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 200px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+  }
+}
