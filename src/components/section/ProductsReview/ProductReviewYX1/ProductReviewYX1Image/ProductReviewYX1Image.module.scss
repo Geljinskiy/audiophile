@@ -1,0 +1,9 @@
+@import 'styles/index.scss';
+
+.image__yx1 {
+  border-radius: 8px;
+
+  @include mediaInBetween('tablet', 'desktop') {
+    min-height: 320px;
+  }
+}

@@ -1,0 +1,20 @@
+@import 'styles/index.scss';
+
+.category {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category__mb {
+  @include mediaUpTo('tablet') {
+    margin-bottom: 24px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 32px;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 48px;
+  }
+}

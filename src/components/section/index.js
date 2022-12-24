@@ -1,2 +1,2 @@
 export * from './AboutUs';
-export * from './ProductReview';
+export * from './ProductsReview';

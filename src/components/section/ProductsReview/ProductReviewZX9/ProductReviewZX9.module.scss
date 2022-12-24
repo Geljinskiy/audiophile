@@ -1,0 +1,108 @@
+@import 'styles/index.scss';
+
+.category__zx9_speaker {
+  background-color: $main-color;
+  background-image: url('/assets/images/pattern-circles.svg');
+  background-repeat: no-repeat;
+
+  @include mediaUpTo('tablet') {
+    min-width: 327px;
+    min-height: 600px;
+    padding: 55px 24px;
+
+    background-size: 558px;
+    background-position: 50% -120px;
+  }
+
+  @include mediaOver('tablet') {
+    background-size: 944px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    min-width: 689px;
+    min-height: 720px;
+    padding: 52px 170px 64px;
+
+    background-position: 50% -290px;
+  }
+
+  @include mediaOver('desktop') {
+    display: flex;
+    gap: 138px;
+
+    padding: 96px 95px 0 117px;
+
+    background-position: -140px -20px;
+  }
+}
+
+.text_wrapper__zx9 {
+  @include mediaOver('desktop') {
+    margin-top: 30px;
+  }
+}
+
+.title__zx9 {
+  @extend %h2-font;
+  color: $light;
+
+  @include mediaUpTo('tablet') {
+    margin-bottom: 24px;
+
+    max-width: 240px;
+
+    font-size: 36px;
+  }
+
+  @include mediaOver('tablet') {
+    font-size: 56px;
+    line-height: 1.03;
+    letter-spacing: 2px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 40px;
+  }
+
+  @include mediaUpTo('desktop') {
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 24px;
+
+    max-width: 240px;
+  }
+}
+
+.description__zx9 {
+  @extend %body-font;
+  color: $light;
+  opacity: 0.75;
+
+  @include mediaUpTo('tablet') {
+    margin-bottom: 24px;
+  }
+
+  @include mediaOver('tablet') {
+    margin-bottom: 40px;
+  }
+
+  @include mediaUpTo('desktop') {
+    text-align: center;
+  }
+
+  @include mediaOver('desktop') {
+    max-width: 350px;
+  }
+}
+
+.button__zx9 {
+  @include mediaUpTo('desktop') {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

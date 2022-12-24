@@ -1,0 +1,52 @@
+@import 'styles/index.scss';
+
+.category_wrapper__yx1 {
+  display: flex;
+
+  @include mediaUpTo('tablet') {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    gap: 11px;
+  }
+
+  @include mediaOver('desktop') {
+    gap: 30px;
+  }
+}
+
+.category__yx1_earphones {
+  background-color: $secondary-light-color;
+
+  @include mediaUpTo('tablet') {
+    min-width: 327px;
+    min-height: 200px;
+    padding: 41px 56px 41px 24px;
+  }
+
+  @include mediaOver('tablet') {
+    padding-top: 101px;
+    padding-bottom: 101px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    min-width: 339px;
+    min-height: 320px;
+    padding-right: 51px;
+    padding-left: 41px;
+  }
+
+  @include mediaOver('desktop') {
+    min-width: 540px;
+    min-height: 320px;
+    padding-left: 95px;
+  }
+}
+.title {
+  margin-bottom: 32px;
+
+  @extend %h4-font;
+  color: $dark;
+}
