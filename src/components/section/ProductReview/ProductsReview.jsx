@@ -1,7 +1,10 @@
+import { Link, NavLink } from 'react-router-dom';
+
 import { Button, Section } from 'components';
 
-import css from './ProductsReview.module.scss';
+import { ROUTES } from 'utils';
 
+import css from './ProductsReview.module.scss';
 import {
   SpeakerZX9MobileImg,
   SpeakerZX9TabletImg,
@@ -11,8 +14,6 @@ import {
   EarphonesYX1DesktopImg,
 } from 'assets';
 
-// TODO: Add links for buttons
-// TODO: Correct hover for the button with styling dark
 const ProductsReview = () => {
   return (
     <Section>
@@ -48,7 +49,9 @@ const ProductsReview = () => {
             truly remarkable sound
           </p>
           <Button className={css.button__zx9} styling="dark">
-            See product
+            <Link className={css.link} to={ROUTES.home}>
+              See product
+            </Link>
           </Button>
         </div>
       </div>
@@ -56,7 +59,11 @@ const ProductsReview = () => {
         className={`${css.category} ${css.category__zx7_speaker} ${css.category__mb}`}
       >
         <h3 className={css.title}>ZX7 speaker</h3>
-        <Button styling="light">See product</Button>
+        <Button styling="light">
+          <Link className={css.link} to={ROUTES.home}>
+            See product
+          </Link>
+        </Button>
       </div>
       <div className={css.category_wrapper__yx1}>
         <picture>
@@ -83,7 +90,11 @@ const ProductsReview = () => {
         </picture>
         <div className={`${css.category} ${css.category__yx1_earphones}`}>
           <h3 className={css.title}>YX1 earphones</h3>
-          <Button styling="light">See product</Button>
+          <Button styling="light">
+            <Link className={css.link} to={ROUTES.home}>
+              See product
+            </Link>
+          </Button>
         </div>
       </div>
     </Section>
