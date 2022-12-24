@@ -1,11 +1,166 @@
 @import 'styles/index.scss';
 
 .category {
-  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.zx9_speaker {
-  padding: 55px 24px;
+.category__mb {
+  @include mediaUpTo('tablet') {
+    margin-bottom: 24px;
+  }
 
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 32px;
+  }
+}
+
+.category__zx9_speaker {
   background-color: $main-color;
+  background-image: url('/assets/images/pattern-circles.svg');
+  background-repeat: no-repeat;
+
+  @include mediaUpTo('tablet') {
+    min-width: 327px;
+    min-height: 600px;
+    padding: 55px 24px;
+
+    background-size: 558px;
+    background-position: 50% -120px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    padding: 52px 170px 64px;
+
+    background-size: 944px;
+    background-position: 50% -290px;
+  }
+
+  @include mediaOver('desktop') {
+    display: flex;
+    align-items: center;
+    gap: 138px;
+  }
+}
+
+.image__zx9 {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mediaUpTo('tablet') {
+    margin-bottom: 32px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 64px;
+  }
+}
+
+.title__zx9 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 24px;
+
+  @extend %h2-font;
+
+  @include mediaUpTo('tablet') {
+    margin-bottom: 24px;
+
+    max-width: 240px;
+
+    font-size: 36px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 40px;
+
+    font-size: 56px;
+    line-height: 1.03;
+    letter-spacing: 2px;
+  }
+
+  text-align: center;
+  color: $light;
+}
+
+.description__zx9 {
+  @exted %body-font;
+  text-align: center;
+  color: $light;
+  opacity: 0.75;
+
+  @include mediaUpTo('tablet') {
+    margin-bottom: 24px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-bottom: 40px;
+  }
+}
+
+.button__zx9 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category__zx7_speaker {
+  padding-top: 101px;
+  padding-bottom: 101px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: initial;
+
+  @include mediaUpTo('tablet') {
+    min-width: 327px;
+    min-height: 320px;
+    padding-left: 24px;
+
+    background-image: url('/assets/images/mobile/speaker-zx7-mobile.jpg');
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    padding-left: 62px;
+
+    background-image: url('/assets/images/tablet/speaker-zx7-tablet.jpg');
+  }
+}
+
+.title {
+  margin-bottom: 32px;
+
+  @extend %h4-font;
+  color: $dark;
+}
+
+.category_wrapper {
+  display: flex;
+
+  @include mediaUpTo('tablet') {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    gap: 11px;
+  }
+}
+
+.image__yx1 {
+  border-radius: 8px;
+}
+
+.category__yx1_earphones {
+  background-color: $secondary-light-color;
+
+  @include mediaUpTo('tablet') {
+    min-width: 327px;
+    min-height: 200px;
+    padding: 41px 56px 41px 24px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    min-width: 339px;
+    padding: 101px 51px 101px 41px;
+  }
 }

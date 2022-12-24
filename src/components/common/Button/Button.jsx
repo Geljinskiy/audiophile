@@ -6,14 +6,17 @@ import styles from './Button.module.scss';
  * **Styled button according to Design System**
  *
  * @example
- * <Button styling={"dark" | "light" | "color" | "transparent"} type={"button" | "submit"}>
+ * <Button styling={"dark" | "light" | "color" | "transparent"} type={"button" | "submit"} className={css.Additional_styles}>
  *    {children}
  * </Button>
  *
  * **/
-const Button = ({ styling, type = 'button', children }) => {
+const Button = ({ styling, type = 'button', children, className }) => {
   return (
-    <button type={type} className={`${styles.button} ${styles[styling]}`}>
+    <button
+      type={type}
+      className={`${styles.button} ${styles[styling]} ${className ?? ''}`}
+    >
       {children}
     </button>
   );
