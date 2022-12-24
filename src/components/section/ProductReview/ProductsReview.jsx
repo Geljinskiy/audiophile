@@ -11,6 +11,8 @@ import {
   EarphonesYX1DesktopImg,
 } from 'assets';
 
+// TODO: Add links for buttons
+// TODO: Correct hover for the button with styling dark
 const ProductsReview = () => {
   return (
     <Section>
@@ -53,10 +55,10 @@ const ProductsReview = () => {
       <div
         className={`${css.category} ${css.category__zx7_speaker} ${css.category__mb}`}
       >
-        <Button styling="light">See product</Button>
         <h3 className={css.title}>ZX7 speaker</h3>
+        <Button styling="light">See product</Button>
       </div>
-      <div className={css.category_wrapper}>
+      <div className={css.category_wrapper__yx1}>
         <picture>
           <source
             media="(max-width: 767.9px)"
