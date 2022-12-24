@@ -39,7 +39,7 @@ const ProductsReview = () => {
             alt="Speaker ZX9"
           />
         </picture>
-        <div>
+        <div className={css.text_wrapper__zx9}>
           <h3 className={`${css.title__zx9}`}>ZX9 speaker</h3>
           <p className={css.description__zx9}>
             Upgrade to premium speakers that are phenomenally built to deliver
@@ -53,8 +53,8 @@ const ProductsReview = () => {
       <div
         className={`${css.category} ${css.category__zx7_speaker} ${css.category__mb}`}
       >
-        <h3 className={css.title}>ZX7 speaker</h3>
         <Button styling="light">See product</Button>
+        <h3 className={css.title}>ZX7 speaker</h3>
       </div>
       <div className={css.category_wrapper}>
         <picture>
