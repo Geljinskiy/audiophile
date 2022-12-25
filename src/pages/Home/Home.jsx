@@ -1,8 +1,9 @@
-import { ProductsReview, AboutUs } from 'components';
+import { CategoriesLinks, ProductsReview, AboutUs } from 'components';
 
 const Home = () => {
   return (
     <>
+      <CategoriesLinks />
       <ProductsReview />
       <AboutUs />
     </>
