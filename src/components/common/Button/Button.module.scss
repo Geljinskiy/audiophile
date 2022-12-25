@@ -52,6 +52,7 @@
 
 .transparent {
   @include suitable-color($dark, transparent);
+  opacity: 0.5;
 
   border: none;
 

@@ -1,8 +1,140 @@
 @import 'styles/index.scss';
 
+.section {
+  display: flex;
+
+  @include mediaUpTo('tablet') {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    gap: 10px;
+  }
+
+  @include mediaOver('desktop') {
+    gap: 30px;
+  }
+}
+
+$category-wrapper-height: 217px;
+$category-height: 165px;
+$category-wrapper-height-desktop: 284px;
+$category-height-desktop: 204px;
+
+.category_img_wrapper {
+  position: relative;
+
+  width: 100%;
+
+  @include mediaUpTo('desktop') {
+    height: $category-wrapper-height;
+    padding-top: $category-wrapper-height - $category-height;
+  }
+
+  @include mediaOver('desktop') {
+    height: $category-wrapper-height-desktop;
+    padding-top: $category-wrapper-height-desktop - $category-height-desktop;
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+
+  background-color: $secondary-light-color;
+  border-radius: 8px;
+
+  @include mediaUpTo('desktop') {
+    height: $category-height;
+
+    padding-top: 88px;
+    padding-bottom: 22px;
+  }
+
+  @include mediaOver('desktop') {
+    height: $category-height-desktop;
+
+    padding-top: 116px;
+    padding-bottom: 30px;
+  }
+}
+
+.category_title {
+  @extend %h6-font;
+  color: $dark;
+  text-align: center;
+
+  @include mediaUpTo('tablet') {
+    font-size: 15px;
+  }
+}
+
 .button {
   display: flex;
   align-items: center;
 
   gap: 13px;
+}
+
+.category_img {
+  position: absolute;
+
+  @include mediaUpTo('tablet') {
+    left: 94px;
+  }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    left: 40px;
+  }
+
+  @include mediaUpTo('desktop') {
+    bottom: 80px;
+  }
+
+  @include mediaOver('desktop') {
+    bottom: 98px;
+    left: 82px;
+  }
+}
+
+$desktop-img-coefficient: 1.3;
+
+.category_img__headphones {
+  $width: 140px;
+
+  @include mediaUpTo('desktop') {
+    width: $width;
+  }
+
+  @include mediaOver('desktop') {
+    width: calc($width * $desktop-img-coefficient);
+  }
+}
+
+.category_img__speakers {
+  $width: 146px;
+
+  @include mediaUpTo('desktop') {
+    width: $width;
+  }
+
+  @include mediaOver('desktop') {
+    width: calc($width * $desktop-img-coefficient);
+  }
+}
+
+.category_img__earphones {
+  $width: 150px;
+
+  @include mediaUpTo('desktop') {
+    width: $width;
+  }
+
+  @include mediaOver('desktop') {
+    width: calc($width * $desktop-img-coefficient);
+  }
 }
