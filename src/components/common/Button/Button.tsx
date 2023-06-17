@@ -1,5 +1,7 @@
-import styles from './Button.module.scss';
+// libs imports
 import React from 'react';
+// local imports
+import styles from './Button.module.scss';
 
 type ButtonProps = {
   styling: 'dark' | 'light' | 'color';
