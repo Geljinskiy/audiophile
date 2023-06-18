@@ -1,4 +1,7 @@
+// libs imports
+import React from 'react';
 import css from './AboutUsImage.module.scss';
+// local imports
 
 import {
   bestGearMobileImg,
@@ -6,7 +9,7 @@ import {
   bestGearDesktopImg,
 } from 'assets';
 
-const AboutUsImage = () => {
+const AboutUsImage: React.FC = (): JSX.Element => {
   return (
     <div className={css.img_thumb}>
       <picture>

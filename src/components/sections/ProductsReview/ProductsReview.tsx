@@ -1,13 +1,15 @@
+// libs imports
+import React from 'react';
+// local imports
 import {
   Section,
   ProductReviewZX9,
   ProductReviewZX7,
   ProductReviewYX1,
 } from 'components';
-
 import css from './ProductsReview.module.scss';
 
-const ProductsReview = () => {
+const ProductsReview: React.FC = (): JSX.Element => {
   return (
     <Section>
       <ProductReviewZX9 className={`${css.category} ${css.category__mb}`} />

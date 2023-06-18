@@ -5,7 +5,7 @@ import styles from './Button.module.scss';
 
 type ButtonProps = {
   styling: 'dark' | 'light' | 'color';
-  type: 'button' | 'submit';
+  type?: 'button' | 'submit';
   className?: string;
   children: React.ReactNode;
 };

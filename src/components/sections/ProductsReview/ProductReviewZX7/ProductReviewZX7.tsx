@@ -1,12 +1,18 @@
+// libs imports
+import React from 'react';
+// local imports
 import { Link } from 'react-router-dom';
-
 import { Button } from 'components/common';
-
 import { ROUTES } from 'utils';
-
 import css from './ProductReviewZX7.module.scss';
 
-const ProductReviewZX7 = ({ className }) => {
+type ProductReviewZX7Props = {
+  className: string;
+};
+
+const ProductReviewZX7: React.FC<ProductReviewZX7Props> = ({
+  className,
+}): JSX.Element => {
   return (
     <div className={`${className ?? ''} ${css.category__zx7_speaker}`}>
       <h3 className={css.title}>ZX7 speaker</h3>

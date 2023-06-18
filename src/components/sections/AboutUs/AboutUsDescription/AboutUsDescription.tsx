@@ -1,6 +1,9 @@
+// libs imports
+import React from 'react';
+// local imports
 import css from './AboutUsDescription.module.scss';
 
-const AboutUsDescription = () => {
+const AboutUsDescription: React.FC = (): JSX.Element => {
   return (
     <>
       <div className={css.description_wrapper}>
