@@ -1,4 +1,4 @@
-export const ROUTES = {
+export const ROUTES: Record<string, string> = {
   home: '/',
   headphones: '/headphones',
   speakers: '/speakers',
