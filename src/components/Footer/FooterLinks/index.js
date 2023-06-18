@@ -1,1 +1,1 @@
-export { default as FooterLinks } from './FooterLinks.jsx';
+export { default as FooterLinks } from './FooterLinks';

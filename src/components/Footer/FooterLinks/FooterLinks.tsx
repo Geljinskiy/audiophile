@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-
-import { ROUTES } from 'utils';
-
+// libs imports
+import React from 'react';
+// local imports
 import css from './FooterLinks.module.scss';
-
+import { Link } from 'react-router-dom';
+import { ROUTES } from 'utils';
 import { Logo } from 'assets';
 
-const FooterLinks = () => {
+const FooterLinks:React.FC = () => {
   return (
     <div className={css.footer__wrapper}>
       <div className={css.footer__logo}>

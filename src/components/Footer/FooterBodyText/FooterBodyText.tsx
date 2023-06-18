@@ -1,6 +1,9 @@
+// libs imports
+import React from 'react';
+// local imports
 import css from './FooterBodyText.module.scss';
 
-const FooterBodyText = () => {
+const FooterBodyText: React.FC = () => {
   return (
     <>
       <p className={`${css.footer__about_us} ${css.footer__text}`}>

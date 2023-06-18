@@ -1,13 +1,15 @@
+// libs imports
+import React from 'react';
+// local imports
 import {
   Container,
   FooterLinks,
   FooterSocialLinks,
   FooterBodyText,
 } from 'components';
-
 import css from './Footer.module.scss';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={css.footer}>
       <Container className={css.footer__container}>
