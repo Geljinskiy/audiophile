@@ -8,7 +8,10 @@ type ContainerProps = {
   children: React.ReactNode;
 };
 
-const Container: React.FC<ContainerProps> = ({ children, className }) => {
+const Container: React.FC<ContainerProps> = ({
+  children,
+  className,
+}): JSX.Element => {
   return (
     <div className={`${css.container} ${className ?? ''}`}>{children}</div>
   );

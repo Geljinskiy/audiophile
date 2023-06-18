@@ -5,7 +5,7 @@ import css from './FooterSocialLinks.module.scss';
 // icons
 import { InstagramIcon, FacebookIcon, TwitterIcon } from 'assets';
 
-const FooterSocialLinks: React.FC = () => {
+const FooterSocialLinks: React.FC = (): JSX.Element => {
   return (
     <ul className={css.social_link__list}>
       <li className={css.social_link__item}>

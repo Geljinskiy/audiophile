@@ -3,7 +3,7 @@ import React from 'react';
 // local imports
 import css from './FooterBodyText.module.scss';
 
-const FooterBodyText: React.FC = () => {
+const FooterBodyText: React.FC = (): JSX.Element => {
   return (
     <>
       <p className={`${css.footer__about_us} ${css.footer__text}`}>

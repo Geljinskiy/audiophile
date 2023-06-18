@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from 'utils';
 import { Logo } from 'assets';
 
-const FooterLinks:React.FC = () => {
+const FooterLinks: React.FC = (): JSX.Element => {
   return (
     <div className={css.footer__wrapper}>
       <div className={css.footer__logo}>

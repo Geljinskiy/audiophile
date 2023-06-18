@@ -8,7 +8,10 @@ type SectionProps = {
   children: React.ReactNode;
 };
 
-const Section:React.FC<SectionProps> = ({ children, className }) => {
+const Section: React.FC<SectionProps> = ({
+  children,
+  className,
+}): JSX.Element => {
   return (
     <section className={`${css.section} ${className ?? ''}`}>
       {children}

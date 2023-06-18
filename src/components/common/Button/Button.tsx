@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
   children,
   className,
-}) => {
+}):JSX.Element => {
   return (
     <button
       type={type}

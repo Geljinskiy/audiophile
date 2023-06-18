@@ -9,7 +9,7 @@ import {
 } from 'components';
 import css from './Footer.module.scss';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = (): JSX.Element => {
   return (
     <footer className={css.footer}>
       <Container className={css.footer__container}>
