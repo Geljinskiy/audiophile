@@ -1,7 +1,7 @@
 // libs imports
 import React from 'react';
 // local imports
-import styles from './Button.module.scss';
+import css from './Button.module.scss';
 
 type ButtonProps = {
   styling: 'dark' | 'light' | 'color';
@@ -15,11 +15,11 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
   children,
   className,
-}):JSX.Element => {
+}): JSX.Element => {
   return (
     <button
       type={type}
-      className={`${styles.button} ${styles[styling]} ${className ?? ''}`}
+      className={`${css.button} ${css[styling]} ${className ?? ''}`}
     >
       {children}
     </button>
