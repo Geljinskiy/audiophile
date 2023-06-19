@@ -1,0 +1,57 @@
+@import 'styles/index.scss';
+
+//   @include mediaUpTo('tablet') {
+//     margin-bottom: 48px;
+
+//     gap: 48px;
+//   }
+
+//   @include mediaInBetween('tablet', 'desktop') {
+//     margin-bottom: 32px;
+
+//     gap: 32px;
+//   }
+
+//   @include mediaUpTo('desktop') {
+//     flex-direction: column;
+//   }
+
+//   @include mediaOver('desktop') {
+//     margin-bottom: 36px;
+
+//     justify-content: space-between;
+//   }
+
+.header {
+  //! ↓ temp solution ↓
+  background-color: $dark;
+  color: $light;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 24px;
+  border-bottom: 1px solid rgba($color: $light, $alpha: 0.1);
+
+  @include mediaInBetween('tablet', 'desktop') {
+    justify-content: start;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+}
+
+.burger {
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-right: 42px;
+  }
+}
+
+.cart {
+  @include mediaInBetween('tablet', 'desktop') {
+    margin-left: auto;
+  }
+}

@@ -2,12 +2,12 @@
 import React from 'react';
 // local imports
 import { Outlet } from 'react-router-dom';
-import { Container, Footer } from 'components';
+import { Container, Footer, Header } from 'components';
 
 const SharedLayout: React.FC = (): JSX.Element => {
   return (
     <>
-      <header>Header is here</header>
+      <Header />
       <main>
         <Container>
           <Outlet />
