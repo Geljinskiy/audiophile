@@ -1,11 +1,12 @@
 // libs imports
 import React from 'react';
 // local imports
-import { ProductsReview, AboutUs } from 'components';
+import { ProductsReview, AboutUs, HeroHome } from 'components';
 
-const Home:React.FC = ():JSX.Element => {
+const Home: React.FC = (): JSX.Element => {
   return (
     <>
+      <HeroHome />
       <ProductsReview />
       <AboutUs />
     </>
