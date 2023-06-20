@@ -27,39 +27,15 @@
 }
 
 .footer__logo {
+  color: $light;
   @include mediaUpTo('tablet') {
     text-align: center;
   }
 }
 
 .link_list {
-  display: flex;
-
-  list-style-type: none;
-
   @include mediaUpTo('tablet') {
     flex-direction: column;
     gap: 16px;
-  }
-
-  @include mediaOver('tablet') {
-    gap: 34px;
-  }
-}
-
-.link_list__link {
-  display: block;
-
-  @extend %sub-title-font;
-  text-decoration: none;
-  color: $light;
-  text-align: center;
-
-  transition: createTransitionFor('color');
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: $main-color;
   }
 }

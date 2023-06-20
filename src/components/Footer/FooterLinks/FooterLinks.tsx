@@ -2,9 +2,9 @@
 import React from 'react';
 // local imports
 import css from './FooterLinks.module.scss';
-import { Link } from 'react-router-dom';
-import { ROUTES } from 'utils';
 import { Logo } from 'assets';
+import { pages } from 'data';
+import { PagesLinks } from 'components/common';
 
 const FooterLinks: React.FC = (): JSX.Element => {
   return (
@@ -12,28 +12,7 @@ const FooterLinks: React.FC = (): JSX.Element => {
       <div className={css.footer__logo}>
         <Logo />
       </div>
-      <ul className={css.link_list}>
-        <li className={css.link_list__item}>
-          <Link className={css.link_list__link} to={ROUTES.home}>
-            Home
-          </Link>
-        </li>
-        <li className={css.link_list__item}>
-          <Link className={css.link_list__link} to={ROUTES.headphones}>
-            Headphones
-          </Link>
-        </li>
-        <li className={css.link_list__item}>
-          <Link className={css.link_list__link} to={ROUTES.speakers}>
-            Speakers
-          </Link>
-        </li>
-        <li className={css.link_list__item}>
-          <Link className={css.link_list__link} to={ROUTES.earphones}>
-            Earphones
-          </Link>
-        </li>
-      </ul>
+      <PagesLinks pages={pages} className={css.link_list} />
     </div>
   );
 };
