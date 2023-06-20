@@ -5,7 +5,7 @@ import { useWindowWidth } from 'utils';
 import css from './Header.module.scss';
 import { Container, PagesLinks, IconButton } from 'components';
 import { Logo, BurgerIcon, CartIcon } from 'assets';
-import pages from 'data/pageLinks.json';
+import { pages } from 'data';
 import { VIEWPORT_WIDTH } from 'utils/constants';
 
 const Header: React.FC = () => {
