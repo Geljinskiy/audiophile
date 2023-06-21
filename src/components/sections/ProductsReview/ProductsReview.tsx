@@ -6,16 +6,19 @@ import {
   ProductReviewZX9,
   ProductReviewZX7,
   ProductReviewYX1,
+  Container,
 } from 'components';
 import css from './ProductsReview.module.scss';
 
 const ProductsReview: React.FC = (): JSX.Element => {
   return (
-    <Section>
-      <ProductReviewZX9 className={`${css.category} ${css.category__mb}`} />
-      <ProductReviewZX7 className={`${css.category}  ${css.category__mb}`} />
-      <ProductReviewYX1 className={css.category} />
-    </Section>
+    <Container>
+      <Section>
+        <ProductReviewZX9 className={`${css.category} ${css.category__mb}`} />
+        <ProductReviewZX7 className={`${css.category}  ${css.category__mb}`} />
+        <ProductReviewYX1 className={css.category} />
+      </Section>
+    </Container>
   );
 };
 

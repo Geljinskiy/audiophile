@@ -2,10 +2,10 @@
 import React from 'react';
 // local imports
 import css from './Button.module.scss';
-
+ 
 //! add onclick later
 type ButtonProps = {
-  styling: 'dark' | 'light' | 'color';
+  styling: 'dark' | 'light' | 'color' | 'transparent';
   type?: 'button' | 'submit';
   className?: string;
   children: React.ReactNode;

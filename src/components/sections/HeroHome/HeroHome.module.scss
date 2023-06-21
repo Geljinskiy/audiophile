@@ -1,0 +1,98 @@
+@import 'styles/index.scss';
+
+.section {
+  color: $light;
+  padding-top: 233px;
+  padding-bottom: 112px;
+  text-align: center;
+  margin-bottom: 92px;
+
+  @include mediaOver('tablet') {
+    padding-top: 216px;
+    padding-bottom: 168px;
+    margin-bottom: 148px;
+  }
+  @include mediaOver('desktop') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 0fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    padding-top: 226px;
+    padding-bottom: 158px;
+    margin-bottom: 200px;
+
+    text-align: left;
+  }
+}
+
+.hero {
+  background-color: $main-dark-color;
+  background-image: url('../../../assets/images/mobile/main-hero-backoround.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  @include mediaOver('tablet') {
+    background-image: url('../../../assets/images/tablet/main-hero-backoround.jpg');
+  }
+  @include mediaOver('desktop') {
+    background-image: url('../../../assets/images/desktop/main-hero-backoround.jpg');
+  }
+}
+
+.heading {
+  @extend %h1-font;
+
+  margin-bottom: 24px;
+
+  @include mediaUpTo('mobile') {
+    font-size: 36px;
+  }
+
+  @include mediaOver('desktop') {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+.overline {
+  @extend %overline-font;
+  opacity: 0.5;
+
+  margin-bottom: 16px;
+
+  @include mediaOver('tablet') {
+    margin-bottom: 24px;
+  }
+
+  @include mediaOver('desktop') {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+.description {
+  @extend %body-font;
+
+  max-width: 350px;
+
+  opacity: 0.75;
+
+  margin: 0 auto 28px auto;
+
+  @include mediaOver('tablet') {
+    margin-bottom: 40px;
+  }
+
+  @include mediaOver('desktop') {
+    grid-area: 3 / 1 / 4 / 2;
+    margin: 0 0 40px 0;
+  }
+}
+
+.button {
+  max-width: 160px;
+
+  @include mediaOver('desktop') {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+}
