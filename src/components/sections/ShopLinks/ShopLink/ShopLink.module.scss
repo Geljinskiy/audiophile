@@ -1,0 +1,75 @@
+@import 'styles/index.scss';
+
+.linkWrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 88px;
+  padding-bottom: 22px;
+
+  background-color: $secondary-light-color;
+  border-radius: 8px;
+  color: $dark;
+  text-decoration: none;
+
+  &:hover .buttonText,
+  &:focus .buttonText,
+  &:active .buttonText {
+    opacity: 1;
+    color: $main-color;
+  }
+
+  @include mediaOver('tablet') {
+    padding-left: 68px;
+    padding-right: 68px;
+    max-width: 223px;
+  }
+
+  @include mediaOver('desktop') {
+    padding-left: 124px;
+    padding-right: 124px;
+    max-width: 350px;
+  }
+}
+
+.picture {
+  position: absolute;
+  bottom: 30%;
+}
+
+.prodHeading {
+  //!temp solution
+  line-height: 1.33;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: 'ManropeBold';
+
+  @include mediaOver('desktop') {
+    font-size: 18px;
+  }
+}
+
+.buttonText {
+  opacity: 0.5;
+  transition: createTransitionFor('opacity'), createTransitionFor('color');
+}
+
+.button {
+  @extend %sub-title-font;
+
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    margin-left: 14px;
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    background-image: url('/assets/icons/arrow-right.svg');
+    opacity: 1;
+  }
+}

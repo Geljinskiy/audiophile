@@ -6,7 +6,8 @@ import css from './PagesLinks.module.scss';
 import { ROUTES } from 'utils';
 
 type PageLink = {
-  pageName: string;
+  name: string;
+  target: string;
 };
 
 type PagesLinksProps = {
@@ -18,11 +19,11 @@ const PagesLinks: React.FC<PagesLinksProps> = ({ pages, className }) => {
   return (
     <ul className={`${css.link_list} ${className ?? ''}`}>
       {pages.map(page => {
-        const { pageName } = page;
+        const { name, target } = page;
         return (
-          <li key={pageName}>
-            <Link className={css.link_list__link} to={ROUTES[pageName]}>
-              {pageName}
+          <li key={name}>
+            <Link className={css.link_list__link} to={target}>
+              {name}
             </Link>
           </li>
         );
