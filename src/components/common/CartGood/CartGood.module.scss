@@ -1,0 +1,51 @@
+@import 'styles/index.scss';
+
+.goodInf {
+  display: flex;
+  align-items: inherit;
+  font-family: 'ManropeBold';
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.image {
+  margin: auto;
+}
+
+.imageWrap {
+  background-color: $secondary-light-color;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  display: flex;
+  margin-right: 16px;
+
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.name {
+  //!change later
+  font-family: 15px;
+  line-height: 1.5;
+
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.price {
+  //!change later
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.5;
+
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.quantity {
+  //!change later
+  font-family: 'ManropeBold';
+  font-family: 15px;
+  line-height: 1.5;
+  opacity: 0.5;
+}

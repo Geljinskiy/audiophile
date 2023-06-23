@@ -22,16 +22,13 @@
 }
 
 .fieldName {
-  //! fix later
-  font-family: 'ManropeBold';
-  font-size: 12px;
+  @extend %sub-field-font;
   margin-bottom: 9px;
   display: flex;
   justify-content: space-between;
 }
 
 .fieldName__notValid::after {
-  //! fix later
   font-family: 'ManropeMedium';
   content: 'Wrong format';
   color: $primary-error-color;

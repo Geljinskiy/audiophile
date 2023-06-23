@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 // local imports
 import { SharedLayout } from 'components';
-import { Home } from 'pages';
+import { Checkout, Home } from 'pages';
 import { ROUTES } from 'utils';
 
 const App: React.FC = () => {
@@ -18,7 +18,7 @@ const App: React.FC = () => {
           />
           <Route path={ROUTES.speakers} element={<div>speakers page</div>} />
           <Route path={ROUTES.earphones} element={<div>earphones page</div>} />
-          <Route path={ROUTES.checkout} element={<div>checkout page</div>} />
+          <Route path={ROUTES.checkout} element={<Checkout />} />
           {/* <Route path={ROUTES.product} element={<div>product page</div>} /> */}
         </Route>
       </Routes>
