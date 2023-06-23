@@ -6,7 +6,7 @@ import { SharedLayout } from 'components';
 import { Home } from 'pages';
 import { ROUTES } from 'utils';
 
-const App: React.FC = (): JSX.Element => {
+const App: React.FC = () => {
   return (
     <>
       <Routes>

@@ -5,19 +5,24 @@
   padding-top: 233px;
   padding-bottom: 112px;
   text-align: center;
+  margin-bottom: 92px;
 
   @include mediaOver('tablet') {
     padding-top: 216px;
     padding-bottom: 168px;
+    margin-bottom: 148px;
   }
   @include mediaOver('desktop') {
-    padding-top: 226px;
-    padding-bottom: 158px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 0fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    padding-top: 226px;
+    padding-bottom: 158px;
+    margin-bottom: 200px;
+
     text-align: left;
   }
 }

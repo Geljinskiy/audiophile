@@ -3,7 +3,7 @@ import React from 'react';
 // local imports
 import css from './FooterLinks.module.scss';
 import { Logo } from 'assets';
-import pages from 'data/pageLinks.json';
+import { pages } from 'data';
 import { PagesLinks } from 'components/common';
 
 const FooterLinks: React.FC = (): JSX.Element => {

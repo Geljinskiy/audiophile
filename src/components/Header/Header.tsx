@@ -5,20 +5,21 @@ import { useWindowWidth } from 'utils';
 import css from './Header.module.scss';
 import { Container, PagesLinks, IconButton } from 'components';
 import { Logo, BurgerIcon, CartIcon } from 'assets';
-import pages from 'data/pageLinks.json';
+import { pages } from 'data';
+import { VIEWPORT_WIDTH } from 'utils/constants';
 
 const Header: React.FC = () => {
   const windowWidth = useWindowWidth();
   return (
     <header className={css.header}>
       <Container className={css.header__container}>
-        {windowWidth < 1440 && (
+        {windowWidth < VIEWPORT_WIDTH.desktop && (
           <IconButton>
             <BurgerIcon className={css.burger} />
           </IconButton>
         )}
         <Logo />
-        {windowWidth >= 1440 && <PagesLinks pages={pages} />}
+        {windowWidth >= VIEWPORT_WIDTH.desktop && <PagesLinks pages={pages} />}
         <IconButton>
           <CartIcon className={css.cart} />
         </IconButton>
