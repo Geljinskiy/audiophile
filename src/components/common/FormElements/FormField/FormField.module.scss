@@ -1,0 +1,39 @@
+@import 'styles/index.scss';
+
+.input {
+  @extend %input-wrapper;
+
+  caret-color: $main-color;
+
+  &::placeholder {
+    color: $dark;
+    opacity: 0.4;
+  }
+}
+
+.input__notValid {
+  border-width: 2px;
+  border-color: $primary-error-color;
+  &:hover,
+  &:focus {
+    border-width: 2px;
+    border-color: $primary-error-color;
+  }
+}
+
+.fieldName {
+  //! fix later
+  font-family: 'ManropeBold';
+  font-size: 12px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fieldName__notValid::after {
+  //! fix later
+  font-family: 'ManropeMedium';
+  content: 'Wrong format';
+  color: $primary-error-color;
+  right: 0;
+}

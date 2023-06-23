@@ -1,0 +1,30 @@
+@import 'styles/index.scss';
+
+.wrapper {
+  background-color: $secondary-light-color;
+  // width: 120px;
+  width: fit-content;
+
+  //!change later
+  font-family: 'ManropeBold';
+  font-size: 13px;
+}
+
+.value {
+  padding: 16px 10px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 16px 20px;
+  margin: 0;
+  cursor: pointer;
+  transition: createTransitionFor('color');
+  color: $sec-not-focused-color;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+}
