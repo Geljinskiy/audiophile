@@ -1,0 +1,38 @@
+@import 'styles/index.scss';
+
+.section {
+  margin-bottom: 98px;
+  padding: 32px 24px;
+  @include mediaOver('tablet') {
+    padding: 32px;
+  }
+
+  background-color: $light;
+  border-radius: 8px;
+}
+
+.heading {
+  @extend %h-font;
+
+  padding-bottom: 32px;
+
+  //!change later
+  font-size: 18px;
+}
+
+.button {
+  min-width: 280px;
+
+  @include mediaOver('tablet') {
+    min-width: 622px;
+  }
+  //! temp solution
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalPrice {
+  margin-bottom: 32px;
+}

@@ -6,7 +6,7 @@ import css from './FormField.module.scss';
 type FormFieldProps = {
   placeholder?: string;
   fieldName?: string;
-  fieldValue?: string;
+  fieldValue?: string | number;
   error?: boolean;
 };
 

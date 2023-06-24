@@ -15,9 +15,12 @@ const CartGood: React.FC<CartGoodProps> = ({ name, price, img, quantity }) => {
     <>
       <div className={css.goodInf}>
         <div className={css.imageWrap}>
-                  <img
-                    //   width=""
-                      className={css.image} src={img} alt={name} />
+          <img
+            //   width=""
+            className={css.image}
+            src={img}
+            alt={name}
+          />
         </div>
         <p className={css.name}>{name}</p>
         <span className={css.price}>$ {price}</span>

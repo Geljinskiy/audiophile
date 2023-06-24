@@ -1,7 +1,15 @@
 @import 'styles/index.scss';
 
 .list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
