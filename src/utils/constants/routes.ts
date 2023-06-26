@@ -1,6 +1,7 @@
 export const ROUTES: Record<string, string> = {
   home: '/',
   headphones: '/headphones',
-  category: '/:categoryType',
+  checkout: '/checkout',
+  category: ':categoryType',
   product: '/:productId',
 };

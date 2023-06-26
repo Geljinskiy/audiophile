@@ -1,11 +1,13 @@
 @import 'styles/index.scss';
 
 .header {
-  padding: 10px;
+  width: 100%;
+
   position: absolute;
-  top: 0;
   left: 50%;
+  top: 0;
   transform: translateX(-50%);
+
   color: $light;
 }
 
