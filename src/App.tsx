@@ -5,6 +5,7 @@ import React from 'react';
 import { SharedLayout } from 'components';
 import { Checkout, Home } from 'pages';
 import { ROUTES } from 'utils';
+import { Category } from 'pages/Category';
 
 const App: React.FC = () => {
   return (
@@ -13,11 +14,17 @@ const App: React.FC = () => {
         <Route path={ROUTES.home} element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route
-            path={ROUTES.headphones}
-            element={<div>headphones page</div>}
+            path={ROUTES.category}
+            element={<Category category="headphones" />}
           />
-          <Route path={ROUTES.speakers} element={<div>speakers page</div>} />
-          <Route path={ROUTES.earphones} element={<div>earphones page</div>} />
+          <Route
+            path={ROUTES.category}
+            element={<Category category="speakers" />}
+          />
+          <Route
+            path={ROUTES.category}
+            element={<Category category="earphones" />}
+          />
           <Route path={ROUTES.checkout} element={<Checkout />} />
           {/* <Route path={ROUTES.product} element={<div>product page</div>} /> */}
         </Route>

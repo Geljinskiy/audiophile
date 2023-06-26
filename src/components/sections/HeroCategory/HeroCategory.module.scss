@@ -1,0 +1,12 @@
+@import 'styles/index.scss';
+
+.hero {
+  background-color: $dark;
+  padding-top: 89px;
+}
+
+.heading {
+  @extend %h4-font;
+  color: $light;
+  padding: 32px 84px;
+}
