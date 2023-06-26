@@ -1,0 +1,11 @@
+@import 'styles/index.scss';
+
+.heading {
+  @extend %h4-font;
+
+  margin-bottom: 32px;
+}
+
+.feldBlock {
+  margin-bottom: 32px;
+}

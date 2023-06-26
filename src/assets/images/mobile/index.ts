@@ -5,3 +5,6 @@ export { default as SpeakerZX9MobileImg } from './speaker-zx9-mobile.png';
 export { default as SpeakersMobileImg } from './speakers.png';
 export { default as HeadphonesMobileImg } from './headphones.png';
 export { default as EarphonesMobileImg } from './earphones.png';
+export { default as XX59 } from './XX59.png';
+export { default as XX99MKII } from './XX99-MK-II.png';
+export { default as YX1} from './YX1.png';

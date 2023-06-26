@@ -1,0 +1,24 @@
+@import 'styles/index.scss';
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemName {
+  opacity: 0.5;
+  //!Change later
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.price {
+  //!Change later
+  font-family: 'ManropeBold';
+  font-size: 18px;
+}
+
+.price__main {
+  color: $main-color;
+}

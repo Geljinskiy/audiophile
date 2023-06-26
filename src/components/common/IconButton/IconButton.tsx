@@ -3,7 +3,6 @@ import React from 'react';
 // local imports
 import css from './IconButton.module.scss';
 
-//! add onclick later
 type IconButtonProps = {
   children: any;
 };

@@ -1,7 +1,6 @@
 %h-font {
   text-transform: uppercase;
   font-family: 'ManropeBold';
-  font-weight: 700px;
 }
 
 %h1-font {
@@ -65,4 +64,10 @@
   font-family: 'ManropeMedium';
   font-size: 15px;
   line-height: 1.66;
+}
+
+%sub-field-font {
+  font-size: 12px;
+  font-family: 'ManropeBold';
+  line-height: 1.36;
 }

@@ -1,0 +1,46 @@
+@import 'styles/index.scss';
+
+.input {
+  @extend %input-wrapper;
+  caret-color: $main-color;
+
+  &::placeholder {
+    color: $dark;
+    opacity: 0.4;
+  }
+}
+
+.fullWidthField {
+  @include mediaOver('tablet') {
+    width: 100%;
+  }
+}
+
+.input__notValid {
+  border-width: 2px;
+  border-color: $primary-error-color;
+  &:hover,
+  &:focus {
+    border-width: 2px;
+    border-color: $primary-error-color;
+  }
+}
+
+.fieldName {
+  @extend %sub-field-font;
+  text-transform: capitalize;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fieldName__notValid::after {
+  font-family: 'ManropeMedium';
+  content: 'Wrong format';
+  color: $primary-error-color;
+  right: 0;
+}
+
+.label {
+  display: block;
+}

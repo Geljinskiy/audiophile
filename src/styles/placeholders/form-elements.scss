@@ -1,0 +1,20 @@
+@import 'styles/variables/index.scss';
+
+%input-wrapper {
+  // width: 100%;
+  width: 310px;
+
+  padding: 18px 24px;
+
+  border: 1px solid $not-focused-color;
+  border-radius: 8px;
+  outline: none;
+  //!change later
+  font-family: 'ManropeBold';
+  font-size: 14px;
+
+  &:hover,
+  &:focus {
+    border-color: $main-color;
+  }
+}
