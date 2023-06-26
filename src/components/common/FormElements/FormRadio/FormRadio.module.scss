@@ -1,7 +1,8 @@
 @import 'styles/index.scss';
 
 .radioLabel {
-  width: 280px;
+  max-width: 310px;
+  width: 100%;
   display: inline-block;
 }
 
@@ -15,6 +16,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  &_active {
+    border-color: $main-color;
+  }
 }
 
 .input {
@@ -39,4 +44,12 @@
 
 .input:checked + .checkmark {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='25' fill='rgb(216, 125, 74)' /%3E%3C/svg%3E");
+}
+
+.fieldName {
+  @extend %sub-field-font;
+  text-transform: capitalize;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
 }

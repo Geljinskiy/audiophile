@@ -2,12 +2,17 @@
 
 .input {
   @extend %input-wrapper;
-
   caret-color: $main-color;
 
   &::placeholder {
     color: $dark;
     opacity: 0.4;
+  }
+}
+
+.fullWidthField {
+  @include mediaOver('tablet') {
+    width: 100%;
   }
 }
 
@@ -23,6 +28,7 @@
 
 .fieldName {
   @extend %sub-field-font;
+  text-transform: capitalize;
   margin-bottom: 9px;
   display: flex;
   justify-content: space-between;
@@ -33,4 +39,8 @@
   content: 'Wrong format';
   color: $primary-error-color;
   right: 0;
+}
+
+.label {
+  display: block;
 }

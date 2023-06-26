@@ -2,17 +2,18 @@
 import React from 'react';
 // local imports
 import { Container, FieldsBlock, Section } from 'components/common';
-import { billingDetails,  shippingInfo, eMoney } from './checkoutFields';
+import { billingDetails, shippingInfo, eMoney } from './checkoutFields';
 import { PaymentDetails } from './PaymentDetails';
+import css from './CheckoutSection.module.scss';
 
 const CheckoutSection: React.FC = () => {
   return (
     <Container>
       <Section>
-        <h1>Checkout</h1>
+        <h1 className={css.heading}>Checkout</h1>
         <form>
-          <FieldsBlock {...billingDetails} />
-          <FieldsBlock {...shippingInfo} />
+          <FieldsBlock className={css.feldBlock} {...billingDetails} />
+          <FieldsBlock className={css.feldBlock} {...shippingInfo} />
           <PaymentDetails />
         </form>
       </Section>

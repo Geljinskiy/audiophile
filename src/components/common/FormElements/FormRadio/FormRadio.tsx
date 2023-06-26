@@ -9,6 +9,7 @@ type FormRadioProps = {
   heading?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   checked: boolean;
+  className?: string;
 };
 
 const FormRadio: React.FC<FormRadioProps> = ({
@@ -17,11 +18,12 @@ const FormRadio: React.FC<FormRadioProps> = ({
   heading,
   onChange,
   checked,
+  className,
 }): JSX.Element => {
   return (
-    <label className={css.radioLabel}>
+    <label className={`${className} ${css.radioLabel}`}>
       <span className={css.fieldName}>{heading}</span>
-      <div className={css.inputWrap}>
+      <div className={`${css.inputWrap} ${checked && css.inputWrap_active}`}>
         <input
           type="radio"
           name={fieldName}

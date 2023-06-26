@@ -36,7 +36,6 @@ const Summary: React.FC = () => {
     { name: 'shipping', value: shipping },
     { name: 'vat', value: vat },
   ];
-  console.log('prices :', prices);
 
   return (
     <Container>
@@ -45,7 +44,7 @@ const Summary: React.FC = () => {
         <CartGoods cart={cart} />
         <CartPrices prices={prices} />
         <CartItemPrice
-          styling='main'
+          styling="main"
           name="grand total"
           value={calcGrandTotal([total, shipping, vat])}
           className={css.totalPrice}

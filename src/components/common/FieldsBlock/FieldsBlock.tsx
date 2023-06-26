@@ -1,22 +1,30 @@
 // libs imports
 import React from 'react';
 // local imports
-import { FormField, FormRadio } from 'components';
+import { FormField } from 'components';
 import { FieldsBlockProps } from 'utils';
+import css from './FieldsBlock.module.scss';
 
-const FieldsBlock: React.FC<FieldsBlockProps> = ({ blockName, fields }) => {
+const FieldsBlock: React.FC<FieldsBlockProps & { className?: string }> = ({
+  blockName,
+  fields,
+  className,
+}) => {
   return (
     <>
-      <h3>{blockName}</h3>
-      {fields.map(({ fieldName, fieldValue, placeholder }) => {
-        return (
-          <FormField
-            fieldName={fieldName}
-            fieldValue={fieldValue}
-            placeholder={placeholder}
-          />
-        );
-      })}
+      <h3 className={css.subHeading}>{blockName}</h3>
+      <div className={`${className} ${css.fieldsBlock}`}>
+        {fields.map((fieldItem, ind) => {
+          const isLastEl = fields.length - 1 === ind;
+          return (
+            <FormField
+              key={fieldItem.fieldName}
+              {...fieldItem}
+              className={!isLastEl && css.field}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };

@@ -1,0 +1,18 @@
+@import 'styles/index.scss';
+
+.subHeading {
+  @extend %sub-title-font;
+
+  margin-bottom: 16px;
+
+  color: $main-color;
+}
+
+.field {
+  margin-bottom: 24px;
+}
+
+.fieldsBlock {
+    display: flex;
+    flex-wrap: wrap;
+}

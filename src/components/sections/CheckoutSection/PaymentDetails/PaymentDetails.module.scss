@@ -1,0 +1,23 @@
+@import 'styles/index.scss';
+.field {
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.radio {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.heading {
+  @extend %sub-title-font;
+
+  margin-bottom: 16px;
+
+  color: $main-color;
+}
+
+.paymentOption {
+  margin-top: 24px;
+}
