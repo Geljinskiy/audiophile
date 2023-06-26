@@ -18,10 +18,10 @@ const Header: React.FC = () => {
             <BurgerIcon className={css.burger} />
           </IconButton>
         )}
-        <Logo />
+        <Logo clasName={css.logo} />
         {windowWidth >= VIEWPORT_WIDTH.desktop && <PagesLinks pages={pages} />}
-        <IconButton>
-          <CartIcon className={css.cart} />
+        <IconButton className={css.cart}>
+          <CartIcon />
         </IconButton>
       </Container>
     </header>
