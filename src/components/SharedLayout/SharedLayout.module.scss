@@ -1,0 +1,7 @@
+@import 'styles/index.scss';
+
+.checkoutBg {
+  @include mediaOver('desktop') {
+    background-color: $secondary-light-color;
+  }
+}

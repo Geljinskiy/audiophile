@@ -16,8 +16,26 @@
   margin-bottom: 16px;
 
   color: $main-color;
+
+  // width: 336px;
 }
 
 .paymentOption {
   margin-top: 24px;
+}
+
+.radios {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  @include mediaOver('tablet') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.bottomSpace {
+  margin-bottom: 24px;
 }

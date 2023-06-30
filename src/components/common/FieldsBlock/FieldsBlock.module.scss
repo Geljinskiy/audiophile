@@ -8,11 +8,32 @@
   color: $main-color;
 }
 
-.field {
-  margin-bottom: 24px;
+.largeField {
+  flex-basis: 100%;
 }
 
 .fieldsBlock {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mediaOver('tablet') {
+    margin-top: -24px;
+    margin-left: -16px;
+  }
+}
+
+.field {
+  @include mediaUpTo('desktop') {
+    flex-basis: 100%;
+  }
+
+  @include mediaOver('tablet') {
+    margin-top: 24px;
+    margin-left: 16px;
+    flex-basis: calc(100% / 2 - 16px);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }

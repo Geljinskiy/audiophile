@@ -9,7 +9,6 @@ type FormFieldProps = {
   fieldValue?: string | number;
   error?: boolean;
   className?: string;
-  fullWidth?: boolean;
 };
 
 const FormField: React.FC<FormFieldProps> = ({
@@ -18,12 +17,9 @@ const FormField: React.FC<FormFieldProps> = ({
   fieldValue,
   error = false,
   className,
-  fullWidth = false,
 }): JSX.Element => {
   return (
-    <label
-      className={`${className} ${css.label} ${fullWidth && css.fullWidthField}`}
-    >
+    <label className={`${className} ${css.label}`}>
       <span className={`${css.fieldName} ${error && css.fieldName__notValid}`}>
         {fieldName}
       </span>
@@ -32,9 +28,7 @@ const FormField: React.FC<FormFieldProps> = ({
         name={fieldName}
         value={fieldValue}
         placeholder={placeholder}
-        className={`${css.input} ${error && css.input__notValid} ${
-          fullWidth && css.fullWidthField
-        }`}
+        className={`${css.input} ${error && css.input__notValid}`}
       />
     </label>
   );

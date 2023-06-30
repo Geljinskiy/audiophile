@@ -2,16 +2,14 @@
 import React from 'react';
 // local imports
 import css from './Checkout.module.scss';
-import { CheckoutSection, Summary } from 'components';
+import { CheckoutSection, Summary, Container } from 'components';
 
 const Checkout: React.FC = (): JSX.Element => {
   return (
-    <>
-      <div style={{ marginTop: '100px' }}></div>
-      {/* <button className={css.button}>Go Back</button> */}
+    <Container className={css.container}>
       <CheckoutSection />
       <Summary />
-    </>
+    </Container>
   );
 };
 

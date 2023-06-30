@@ -1,4 +1,8 @@
-.button {
-  margin-top: 79px;
-  margin-bottom: 38px;
+@import 'styles/index.scss';
+
+.container {
+  @include mediaOver('desktop') {
+    display: flex;
+    justify-content: space-between;
+  }
 }

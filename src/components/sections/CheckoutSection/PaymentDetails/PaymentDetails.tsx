@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 // local imports
-import { FormField, FormRadio } from 'components/common';
+import { FieldsBlock, FormField, FormRadio } from 'components/common';
 import { eMoney } from '../checkoutFields';
 import { CashPaymentIcon } from 'assets';
 import css from './PaymentDetails.module.scss';
@@ -16,35 +16,29 @@ const PaymentDetails: React.FC = () => {
 
   return (
     <>
-      <h3 className={css.heading}>Payment Details</h3>
-      <FormRadio
-        className={css.radio}
-        heading="Payment Method"
-        fieldValue="e-Money"
-        fieldName="payment"
-        onChange={handleOptionChange}
-        checked={selectedMethod === 'e-Money'}
-      />
-      <FormRadio
-        className={css.radio}
-        fieldValue="Cash on Delivery"
-        fieldName="payment"
-        onChange={handleOptionChange}
-        checked={selectedMethod === 'Cash on Delivery'}
-      />
-      
-      {selectedMethod === 'e-Money' &&
-        eMoney.map((item, ind) => {
-          const isLastEl = eMoney.length - 1 === ind;
+      <div className={`${css.container} ${selectedMethod && css.bottomSpace}`}>
+        <h3 className={css.heading}>Payment Details</h3>
+        <div className={css.radios}>
+          <FormRadio
+            className={css.radio}
+            heading="Payment Method"
+            fieldValue="e-Money"
+            fieldName="payment"
+            onChange={handleOptionChange}
+            checked={selectedMethod === 'e-Money'}
+          />
+          <FormRadio
+            className={css.radio}
+            fieldValue="Cash on Delivery"
+            fieldName="payment"
+            onChange={handleOptionChange}
+            checked={selectedMethod === 'Cash on Delivery'}
+          />
+        </div>
+      </div>
 
-          return (
-            <FormField
-              key={item.fieldName}
-              {...item}
-              className={!isLastEl && css.field}
-            />
-          );
-        })}
+      {selectedMethod === 'e-Money' && <FieldsBlock fields={eMoney} />}
+
       {selectedMethod === 'Cash on Delivery' && (
         <div className={css.paymentOption}>
           <CashPaymentIcon />

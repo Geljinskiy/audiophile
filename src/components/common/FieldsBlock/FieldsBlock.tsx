@@ -12,15 +12,17 @@ const FieldsBlock: React.FC<FieldsBlockProps & { className?: string }> = ({
 }) => {
   return (
     <>
-      <h3 className={css.subHeading}>{blockName}</h3>
+      {blockName && <h3 className={css.subHeading}>{blockName}</h3>}
       <div className={`${className} ${css.fieldsBlock}`}>
-        {fields.map((fieldItem, ind) => {
-          const isLastEl = fields.length - 1 === ind;
+        {fields.map(fieldItem => {
+          console.log(fieldItem);
+          //!change
+          const isLarge = fieldItem.fullWidth;
           return (
             <FormField
               key={fieldItem.fieldName}
               {...fieldItem}
-              className={!isLastEl && css.field}
+              className={`${css.field} ${isLarge && css.largeField}`}
             />
           );
         })}
