@@ -33,4 +33,8 @@
   @include mediaOver('desktop') {
     width: 350px;
   }
+
+  @include mediaInBetween('tablet', 'desktop') {
+    display: flex;
+  }
 }

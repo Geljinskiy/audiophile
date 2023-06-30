@@ -4,6 +4,10 @@
   @extend %h5-font;
 
   margin-bottom: 24px;
+
+  @include mediaOver("tablet"){
+    font-size: 32px;
+  }
 }
 
 .descr  {

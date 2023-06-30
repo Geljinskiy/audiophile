@@ -15,11 +15,11 @@ import { XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9 } from 'data';
 const products = [XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9];
 
 const ProductDetails: React.FC = () => {
-  const { productId } = useParams<{ productId: string }>();
+  const { productName } = useParams<{ productName: string }>();
 
   let product;
 
-  switch (productId) {
+  switch (productName) {
     case 'XX59':
       product = XX59;
       break;
@@ -44,9 +44,6 @@ const ProductDetails: React.FC = () => {
 
   return (
     <>
-      <div
-        style={{ paddingTop: 100, backgroundColor: 'black', marginBottom: 40 }}
-      ></div>
       <Product {...product} />
       <AboutProduct description={product.features} stuff={product.inBox} />
       <ProductGallerySection

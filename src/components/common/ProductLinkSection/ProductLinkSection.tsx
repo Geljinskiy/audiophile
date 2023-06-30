@@ -1,5 +1,6 @@
 // libs imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 // local imports
 import css from './ProductLink.module.scss';
 import { Button, Container, Section } from 'components';
@@ -38,7 +39,9 @@ const ProductLinkSection: React.FC<
           <h2 className={css.heading}>{productName}</h2>
           <span className={css.description}>{productDesc}</span>
           <Button className={css.btn} styling="color">
-            See Product
+            <Link className={css.link} to={target}>
+              See product
+            </Link>
           </Button>
         </div>
       </Section>

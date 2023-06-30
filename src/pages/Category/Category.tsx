@@ -5,16 +5,17 @@ import { useParams } from 'react-router-dom';
 import { HeroCategory, ProductLinks, ShopLinks, AboutUs } from 'components';
 import { headphones, earphones, speakers } from 'data';
 
-type CategoryProps = {
-  category: string;
-};
+const Category: React.FC = () => {
+  const { categoryName } = useParams<{ categoryName: string }>();
 
-const Category: React.FC<CategoryProps> = ({ category }) => {
-  const { categoryType } = useParams<{ categoryType: string }>();
+  //! change
+  if (!categoryName) {
+    return <div>err</div>;
+  }
 
   let categoryProduct;
 
-  switch (categoryType) {
+  switch (categoryName) {
     case 'speakers':
       categoryProduct = speakers;
       break;
@@ -28,17 +29,19 @@ const Category: React.FC<CategoryProps> = ({ category }) => {
       categoryProduct = speakers;
   }
 
-  if (categoryType === 'speakers') {
+  if (categoryName === 'speakers') {
     categoryProduct = speakers;
-  } else if (categoryType === 'earphones') {
+  } else if (categoryName === 'earphones') {
     categoryProduct = earphones;
   } else {
     categoryProduct = headphones;
   }
 
+  console.log(categoryProduct[0].productCategory);
+
   return (
     <>
-      <HeroCategory heading={category} />
+      <HeroCategory heading={categoryName} />
       <ProductLinks product={categoryProduct} />
       <ShopLinks />
       <AboutUs />

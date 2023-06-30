@@ -15,21 +15,19 @@ const App: React.FC = () => {
           <Route index element={<Home />} />
           <Route
             path={ROUTES.category}
-            element={<Category category="headphones" />}
+            element={<Category/>}
           />
-          <Route
+          {/* <Route
             path={ROUTES.category}
             element={<Category category="speakers" />}
           />
           <Route
             path={ROUTES.category}
             element={<Category category="earphones" />}
-          />
+          /> */}
           <Route path={ROUTES.checkout} element={<Checkout />} />
 
 
-          <Route path={ROUTES.product} element={<ProductDetails />} />
-          <Route path={ROUTES.product} element={<ProductDetails />} />
           <Route path={ROUTES.product} element={<ProductDetails />} />
         </Route>
       </Routes>

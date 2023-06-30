@@ -12,7 +12,7 @@ type InBoxProps = {
 const InBox: React.FC<InBoxProps> = ({ stuff }) => {
   return (
     <>
-      <h3 className={css.heading}>In the box</h3>
+      <h2 className={css.heading}>In the box</h2>
       <ul className={css.list}>
         {stuff.map(item => {
           const entries = Object.entries(item);

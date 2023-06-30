@@ -1,6 +1,6 @@
 // libs imports
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 // local imports
 import css from './ShopLink.module.scss';
 import ShopLinkProps from './ShopLinkProps';
@@ -14,7 +14,7 @@ const ShopLink: React.FC<ShopLinkProps> = ({
   const { mobile, tablet, desktop } = images;
   return (
     <li className={className}>
-      <Link to={target} className={css.linkWrapper}>
+      <NavLink to={target} className={css.linkWrapper}>
         <picture className={css.picture}>
           <source
             //! extract media sizes into vars
@@ -38,7 +38,7 @@ const ShopLink: React.FC<ShopLinkProps> = ({
         <span className={css.button}>
           <span className={css.buttonText}>shop</span>
         </span>
-      </Link>
+      </NavLink>
     </li>
   );
 };

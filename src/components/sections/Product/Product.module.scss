@@ -1,6 +1,7 @@
 @import 'styles/index.scss';
 
 .section {
+  padding-top: 124px;
   display: flex;
   flex-direction: column;
   @include mediaOver('tablet') {

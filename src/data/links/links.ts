@@ -50,7 +50,7 @@ const links = [
   },
   {
     name: 'earphones',
-    target: ROUTES.checkout,
+    target: ROUTES.earphones,
     images: {
       mobile: {
         src: EarphonesMobileImg,

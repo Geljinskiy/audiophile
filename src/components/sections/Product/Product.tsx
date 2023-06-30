@@ -51,7 +51,7 @@ const Product: React.FC<ProductProps> = ({
           <div className={css.cartAdding}>
             <FormCunter fieldValue={1} />
             <Button className={css.btn} styling="color">
-              See Product
+              add to cart
             </Button>
           </div>
         </div>

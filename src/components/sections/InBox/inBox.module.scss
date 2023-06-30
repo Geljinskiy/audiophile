@@ -3,6 +3,14 @@
 .heading {
   @extend %h5-font;
   margin-bottom: 24px;
+
+  @include mediaOver('tablet') {
+    font-size: 32px;
+  }
+
+  @include mediaInBetween("tablet", "desktop"){
+    margin-right: 170px;
+  }
 }
 
 .list {
@@ -19,6 +27,7 @@
 .quantity {
   color: $main-color;
   font-family: 'ManropeBold';
+  margin-right: 20px;
 }
 
 .itemName {

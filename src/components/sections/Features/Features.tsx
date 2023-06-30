@@ -11,7 +11,7 @@ type FeaturesProps = {
 const Features: React.FC<FeaturesProps> = ({ description }) => {
   return (
     <>
-      <h3 className={css.heading}>features</h3>
+      <h2 className={css.heading}>features</h2>
       {typeof description === 'string' ? (
         <Description>{description}</Description>
       ) : (

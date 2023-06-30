@@ -3,6 +3,10 @@
 .heading {
   @extend %h5-font;
   margin-bottom: 40px;
+
+  @include mediaOver('tablet') {
+    font-size: 32px;
+  }
 }
 
 .section {

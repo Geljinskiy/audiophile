@@ -13,9 +13,7 @@ const ShopLinks: React.FC = (): JSX.Element => {
         <ul className={css.list}>
           {links.map(link => {
             const { name } = link;
-            return (
-              <ShopLink {...link} key={name} className={css.listItem} />
-            );
+            return <ShopLink {...link} key={name} className={css.listItem} />;
           })}
         </ul>
       </Section>

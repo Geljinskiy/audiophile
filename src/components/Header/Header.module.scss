@@ -3,12 +3,17 @@
 .header {
   width: 100%;
 
+  color: $light;
+  background-color: $dark;
+}
+
+.transparent {
   position: absolute;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
 
-  color: $light;
+  background-color: transparent;
 }
 
 .header__container {
