@@ -1,0 +1,83 @@
+@import 'styles/index.scss';
+
+.img {
+  max-width: none;
+}
+
+.section {
+  text-align: center;
+  @include mediaOver('desktop') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.imageWrap {
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $secondary-light-color;
+  padding: 42px 52px;
+  border-radius: 8px;
+
+  @include mediaOver('desktop') {
+    padding: 70px 94px;
+  }
+}
+
+.newProduct {
+  @extend %overline-font;
+
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  color: $main-color;
+
+  @include mediaOver('desktop') {
+    margin-bottom: 16px;
+  }
+}
+
+.heading {
+  @extend %h4-font;
+
+  margin-bottom: 24px;
+
+  @include mediaOver('tablet') {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+.description {
+  opacity: 0.5;
+  margin-bottom: 24px;
+  display: inline-block;
+
+  @include mediaOver('desktop') {
+    margin-bottom: 40px;
+  }
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  @include mediaOver('desktop') {
+    margin: 0;
+  }
+}
+
+.textSide {
+  @include mediaOver('desktop') {
+    text-align: start;
+    max-width: 445px;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}

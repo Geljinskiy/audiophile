@@ -1,0 +1,34 @@
+@import 'styles/index.scss';
+
+.heading {
+  @extend %h5-font;
+  margin-bottom: 40px;
+
+  @include mediaOver('tablet') {
+    font-size: 32px;
+  }
+}
+
+.section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  list-style: none;
+  width: 100%;
+
+  @include mediaOver('tablet') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.listItem {
+  &:not(:last-child) {
+    margin-bottom: 56px;
+  }
+}

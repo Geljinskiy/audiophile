@@ -1,0 +1,26 @@
+@import 'styles/index.scss';
+
+.imageWrap {
+  display: flex;
+  justify-content: center;
+  background-color: $secondary-light-color;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  padding: 12px 0;
+
+  @include mediaOver('tablet') {
+    height: 318px;
+    align-items: center;
+    padding: 0 38px;
+  }
+
+  @include mediaOver('desktop') {
+    padding: 0 102px;
+  }
+}
+
+.heading {
+  @extend %h5-font;
+
+  margin-bottom: 32px;
+}

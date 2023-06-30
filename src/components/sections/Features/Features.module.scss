@@ -1,0 +1,15 @@
+@import 'styles/index.scss';
+
+.heading {
+  @extend %h5-font;
+
+  margin-bottom: 24px;
+
+  @include mediaOver("tablet"){
+    font-size: 32px;
+  }
+}
+
+.descr  {
+  margin-bottom: 24px;
+}
