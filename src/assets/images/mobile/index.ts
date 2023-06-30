@@ -50,3 +50,6 @@ export { default as ZX9WithoutShadowMobileImg } from './ZX9-without-shadow.png';
 export { default as XX59WithoutShadowMobileImg } from './XX59-without-shadow.png';
 
 export { default as XX99MarkIIWithoutShadowMobileImg } from './XX99-MARK-II-without-shadow.png';
+export { default as XX59 } from './XX59.png';
+export { default as XX99MKII } from './XX99-MK-II.png';
+export { default as YX1} from './YX1.png';
