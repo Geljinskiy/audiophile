@@ -13,21 +13,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path={ROUTES.home} element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route
-            path={ROUTES.category}
-            element={<Category/>}
-          />
-          {/* <Route
-            path={ROUTES.category}
-            element={<Category category="speakers" />}
-          />
-          <Route
-            path={ROUTES.category}
-            element={<Category category="earphones" />}
-          /> */}
+          <Route path={ROUTES.category} element={<Category />} />
           <Route path={ROUTES.checkout} element={<Checkout />} />
-
-
           <Route path={ROUTES.product} element={<ProductDetails />} />
         </Route>
       </Routes>
