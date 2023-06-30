@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 // local imports
 import { SharedLayout } from 'components';
-import { Checkout, Home } from 'pages';
+import { Checkout, Home, ProductDetails } from 'pages';
 import { ROUTES } from 'utils';
 import { Category } from 'pages/Category';
 
@@ -26,7 +26,11 @@ const App: React.FC = () => {
             element={<Category category="earphones" />}
           />
           <Route path={ROUTES.checkout} element={<Checkout />} />
-          {/* <Route path={ROUTES.product} element={<div>product page</div>} /> */}
+
+
+          <Route path={ROUTES.product} element={<ProductDetails />} />
+          <Route path={ROUTES.product} element={<ProductDetails />} />
+          <Route path={ROUTES.product} element={<ProductDetails />} />
         </Route>
       </Routes>
     </>

@@ -1,0 +1,36 @@
+@import 'styles/index.scss';
+
+.section {
+  @include mediaOver('desktop') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.aboutItem {
+  &:not(:last-child) {
+    margin-bottom: 88px;
+    @include mediaOver('tablet') {
+      margin-bottom: 120px;
+    }
+    @include mediaOver('desktop') {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mediaOver('desktop') {
+    flex-shrink: 0;
+  }
+}
+
+.feature {
+  @include mediaOver('desktop') {
+    width: 635px;
+  }
+}
+
+.inBox {
+  @include mediaOver('desktop') {
+    width: 350px;
+  }
+}

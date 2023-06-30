@@ -1,6 +1,3 @@
-import ZX7 from './ZX7';
-import ZX9 from './ZX9';
-
-const speakers = [ZX7, ZX9];
-
-export default speakers;
+export { default as ZX7 } from './ZX7';
+export { default as ZX9 } from './ZX9';
+export { default as speakers } from './speakers';

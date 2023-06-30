@@ -1,83 +1,26 @@
 @import 'styles/index.scss';
 
-.img {
-  max-width: none;
-}
-
-.section {
-  text-align: center;
-  @include mediaOver('desktop') {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
 .imageWrap {
-  margin-bottom: 32px;
-
   display: flex;
-  align-items: center;
   justify-content: center;
-
   background-color: $secondary-light-color;
-  padding: 42px 52px;
   border-radius: 8px;
+  margin-bottom: 32px;
+  padding: 12px 0;
 
-  @include mediaOver('desktop') {
-    padding: 70px 94px;
+  @include mediaOver('tablet') {
+    height: 318px;
+    align-items: center;
+    padding: 0 38px;
   }
-}
-
-.newProduct {
-  @extend %overline-font;
-
-  display: inline-block;
-
-  margin-bottom: 24px;
-
-  color: $main-color;
 
   @include mediaOver('desktop') {
-    margin-bottom: 16px;
+    padding: 0 102px;
   }
 }
 
 .heading {
-  @extend %h4-font;
+  @extend %h5-font;
 
-  margin-bottom: 24px;
-
-  @include mediaOver('tablet') {
-    font-size: 40px;
-    margin-bottom: 32px;
-  }
-}
-
-.description {
-  opacity: 0.5;
-  margin-bottom: 24px;
-  display: inline-block;
-
-  @include mediaOver('desktop') {
-    margin-bottom: 40px;
-  }
-}
-
-.btn {
-  display: block;
-  margin: 0 auto;
-  @include mediaOver('desktop') {
-    margin: 0;
-  }
-}
-
-.textSide {
-  @include mediaOver('desktop') {
-    text-align: start;
-    max-width: 445px;
-  }
-}
-
-.reverse {
-  flex-direction: row-reverse;
+  margin-bottom: 32px;
 }

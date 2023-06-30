@@ -5,34 +5,41 @@ import { Link } from 'react-router-dom';
 import css from './ShopLink.module.scss';
 import ShopLinkProps from './ShopLinkProps';
 
-const ShopLink: React.FC<ShopLinkProps> = ({ images, name, target }) => {
+const ShopLink: React.FC<ShopLinkProps> = ({
+  images,
+  name,
+  target,
+  className,
+}) => {
   const { mobile, tablet, desktop } = images;
   return (
-    <Link to={target} className={css.linkWrapper}>
-      <picture className={css.picture}>
-        <source
-          //! extract media sizes into vars
-          media="(max-width: 767.9px)"
-          width={mobile.width.toString()}
-          srcSet={mobile.src}
-        />
-        <source
-          media="(max-width: 1439.9px)"
-          width={tablet.width.toString()}
-          srcSet={tablet.src}
-        />
-        <source
-          media="(min-width: 1440px)"
-          width={desktop.width.toString()}
-          srcSet={desktop.src}
-        />
-        <img src={mobile.src} alt={name} />
-      </picture>
-      <h3 className={css.prodHeading}>{name}</h3>
-      <span className={css.button}>
-        <span className={css.buttonText}>shop</span>
-      </span>
-    </Link>
+    <li className={className}>
+      <Link to={target} className={css.linkWrapper}>
+        <picture className={css.picture}>
+          <source
+            //! extract media sizes into vars
+            media="(max-width: 767.9px)"
+            width={mobile.width.toString()}
+            srcSet={mobile.src}
+          />
+          <source
+            media="(max-width: 1439.9px)"
+            width={tablet.width.toString()}
+            srcSet={tablet.src}
+          />
+          <source
+            media="(min-width: 1440px)"
+            width={desktop.width.toString()}
+            srcSet={desktop.src}
+          />
+          <img src={mobile.src} alt={name} />
+        </picture>
+        <h3 className={css.prodHeading}>{name}</h3>
+        <span className={css.button}>
+          <span className={css.buttonText}>shop</span>
+        </span>
+      </Link>
+    </li>
   );
 };
 

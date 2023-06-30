@@ -42,4 +42,5 @@ const FooterSocialLinks: React.FC = (): JSX.Element => {
   );
 };
 
+
 export default FooterSocialLinks;

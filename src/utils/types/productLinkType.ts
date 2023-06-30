@@ -8,6 +8,6 @@ export type ProductLinkProps = {
   img: ProductImage;
   productName: string;
   newProduct?: boolean;
-  productDesc: string;
+  productDesc?: string;
   target: string;
 };

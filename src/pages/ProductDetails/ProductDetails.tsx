@@ -1,0 +1,63 @@
+// libs imports
+import React from 'react';
+import { useParams } from 'react-router-dom';
+// local imports
+import {
+  AboutUs,
+  Product,
+  ProductGallerySection,
+  ShopLinks,
+  Recomendations,
+  AboutProduct,
+} from 'components';
+
+import { XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9 } from 'data';
+const products = [XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9];
+
+const ProductDetails: React.FC = () => {
+  const { productId } = useParams<{ productId: string }>();
+
+  let product;
+
+  switch (productId) {
+    case 'XX59':
+      product = XX59;
+      break;
+    case 'XX99MarkI':
+      product = XX99MarkI;
+      break;
+    case 'XX99MarkII':
+      product = XX99MarkII;
+      break;
+    case 'YX1':
+      product = YX1;
+      break;
+    case 'ZX7':
+      product = ZX7;
+      break;
+    case 'ZX9':
+      product = ZX9;
+      break;
+    default:
+      product = XX59;
+  }
+
+  return (
+    <>
+      <div
+        style={{ paddingTop: 100, backgroundColor: 'black', marginBottom: 40 }}
+      ></div>
+      <Product {...product} />
+      <AboutProduct description={product.features} stuff={product.inBox} />
+      <ProductGallerySection
+        images={product.gallery}
+        productName={product.productName}
+      />
+      <Recomendations products={products} currentProduct={product} />
+      <ShopLinks />
+      <AboutUs />
+    </>
+  );
+};
+
+export default ProductDetails;

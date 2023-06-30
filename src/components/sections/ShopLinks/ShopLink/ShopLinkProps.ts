@@ -11,6 +11,7 @@ type ShopLinkProps = {
     desktop: Device;
   };
   target: string;
+  className?: string
 };
 
 export default ShopLinkProps;

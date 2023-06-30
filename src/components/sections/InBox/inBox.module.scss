@@ -1,0 +1,26 @@
+@import 'styles/index.scss';
+
+.heading {
+  @extend %h5-font;
+  margin-bottom: 24px;
+}
+
+.list {
+  list-style: none;
+}
+
+.listItem {
+  @extend %body-font;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.quantity {
+  color: $main-color;
+  font-family: 'ManropeBold';
+}
+
+.itemName {
+  opacity: 0.5;
+}

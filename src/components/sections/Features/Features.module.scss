@@ -1,0 +1,11 @@
+@import 'styles/index.scss';
+
+.heading {
+  @extend %h5-font;
+
+  margin-bottom: 24px;
+}
+
+.descr  {
+  margin-bottom: 24px;
+}

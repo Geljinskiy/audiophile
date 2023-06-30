@@ -1,7 +1,4 @@
-import XX59 from './XX59';
-import XX99MarkI from './XX99MarkI';
-import XX99MarkII from './XX99MarkII';
-
-const headphones = [XX99MarkII, XX99MarkI, XX59];
-
-export default headphones;
+export { default as XX59 } from './XX59';
+export { default as XX99MarkI } from './XX99MarkI';
+export { default as XX99MarkII } from './XX99MarkII';
+export { default as headphones } from './headphones';

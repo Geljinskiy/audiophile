@@ -1,7 +1,7 @@
 // libs imports
 import React from 'react';
 // local imports
-import { ProductLink } from 'components';
+import { ProductLinkSection } from 'components';
 import { ProductLinkProps } from 'utils';
 
 type ProductLinksProps = {
@@ -13,7 +13,7 @@ const ProductLinks: React.FC<ProductLinksProps> = ({ product }) => {
     <>
       {product.map((item, inx) => {
         return (
-          <ProductLink
+          <ProductLinkSection
             reverse={inx % 2 !== 0}
             key={item.productName}
             {...item}

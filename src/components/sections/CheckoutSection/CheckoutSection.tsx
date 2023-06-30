@@ -1,8 +1,8 @@
 // libs imports
 import React from 'react';
 // local imports
+import { billingDetails, shippingInfo } from './checkoutFields';
 import { Container, FieldsBlock, Section } from 'components/common';
-import { billingDetails, shippingInfo, eMoney } from './checkoutFields';
 import { PaymentDetails } from './PaymentDetails';
 import css from './CheckoutSection.module.scss';
 

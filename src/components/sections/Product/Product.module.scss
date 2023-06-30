@@ -1,0 +1,109 @@
+@import 'styles/index.scss';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  @include mediaOver('tablet') {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.textSide {
+  @include mediaOver('tablet') {
+    max-width: 340px;
+  }
+}
+
+.img {
+  max-width: none;
+}
+
+.imageWrap {
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  background-color: $secondary-light-color;
+  padding: 72px 56px;
+  border-radius: 8px;
+
+  @include mediaOver('tablet') {
+    max-width: 281px;
+    margin-bottom: 0;
+    padding: 140px 50px;
+  }
+
+  @include mediaOver('desktop') {
+    padding: 70px 94px;
+    max-width: 540px;
+  }
+}
+
+.newProduct {
+  @extend %overline-font;
+
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  color: $main-color;
+
+  @include mediaOver('tablet') {
+    margin-bottom: 16px;
+
+    font-size: 12px;
+  }
+}
+
+.heading {
+  @extend %h4-font;
+
+  margin-bottom: 24px;
+
+  @include mediaOver('tablet') {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  @include mediaOver('desktop') {
+    font-size: 40px;
+  }
+}
+
+.description {
+  opacity: 0.5;
+  margin-bottom: 24px;
+  display: inline-block;
+  font-size: 15px;
+
+  @include mediaOver('tablet') {
+    margin-bottom: 32px;
+  }
+
+  @include mediaOver('desktop') {
+    margin-bottom: 40px;
+  }
+}
+
+.btn {
+  margin-left: 16px;
+  @include mediaOver('desktop') {
+    // margin: 0;
+  }
+}
+
+.price {
+  //!Change later
+  font-family: 'ManropeBold';
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cartAdding {
+  display: flex;
+}
