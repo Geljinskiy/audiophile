@@ -3,12 +3,18 @@
 .section {
   margin-bottom: 98px;
   padding: 32px 24px;
+  width: 100%;
+
+  height: fit-content;
   @include mediaOver('tablet') {
     padding: 32px;
   }
 
   background-color: $light;
   border-radius: 8px;
+  @include mediaOver('desktop') {
+    max-width: 350px;
+  }
 }
 
 .heading {
@@ -21,11 +27,11 @@
 }
 
 .button {
-  min-width: 280px;
+  width: 100%;
 
-  @include mediaOver('tablet') {
-    min-width: 622px;
-  }
+  // @include mediaOver('tablet') {
+  //   min-width: 622px;
+  // }
   //! temp solution
   margin: 0 auto;
   display: flex;

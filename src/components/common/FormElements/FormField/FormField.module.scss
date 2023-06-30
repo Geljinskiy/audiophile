@@ -3,16 +3,11 @@
 .input {
   @extend %input-wrapper;
   caret-color: $main-color;
+  width: 100%;
 
   &::placeholder {
     color: $dark;
     opacity: 0.4;
-  }
-}
-
-.fullWidthField {
-  @include mediaOver('tablet') {
-    width: 100%;
   }
 }
 

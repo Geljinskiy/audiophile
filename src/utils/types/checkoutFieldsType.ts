@@ -6,6 +6,6 @@ export type FieldProps = {
 };
 
 export type FieldsBlockProps = {
-  blockName: string;
+  blockName?: string;
   fields: FieldProps[];
 };

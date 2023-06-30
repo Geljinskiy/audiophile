@@ -38,22 +38,20 @@ const Summary: React.FC = () => {
   ];
 
   return (
-    <Container>
-      <Section className={css.section}>
-        <h2 className={css.heading}>Summary</h2>
-        <CartGoods cart={cart} />
-        <CartPrices prices={prices} />
-        <CartItemPrice
-          styling="main"
-          name="grand total"
-          value={calcGrandTotal([total, shipping, vat])}
-          className={css.totalPrice}
-        />
-        <Button styling="color" className={css.button}>
-          Continue & pay
-        </Button>
-      </Section>
-    </Container>
+    <Section className={css.section}>
+      <h2 className={css.heading}>Summary</h2>
+      <CartGoods cart={cart} />
+      <CartPrices prices={prices} />
+      <CartItemPrice
+        styling="main"
+        name="grand total"
+        value={calcGrandTotal([total, shipping, vat])}
+        className={css.totalPrice}
+      />
+      <Button styling="color" className={css.button}>
+        Continue & pay
+      </Button>
+    </Section>
   );
 };
 

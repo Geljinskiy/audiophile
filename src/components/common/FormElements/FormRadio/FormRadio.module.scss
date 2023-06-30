@@ -1,9 +1,13 @@
 @import 'styles/index.scss';
 
 .radioLabel {
-  max-width: 310px;
-  width: 100%;
+  // max-width: 310px;
+  // width: 100%;
   display: inline-block;
+
+  @include mediaOver('tablet') {
+    width: 304px;
+  }
 }
 
 .inputWrap {
