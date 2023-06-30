@@ -1,0 +1,25 @@
+@import 'styles/index.scss';
+
+.imageBottomSpc {
+  @include mediaUpTo('tablet') {
+    margin-bottom: 20px;
+  }
+}
+
+.section {
+  @include mediaOver('tablet') {
+    display: grid;
+    grid-template-columns: 277px 395px;
+    justify-content: space-between;
+    row-gap: 20px;
+  }
+
+  @include mediaOver('desktop') {
+    grid-template-columns: 445px 635px;
+  }
+}
+
+.section > *:last-child {
+  grid-column: 2 / 2;
+  grid-row: 1 / 3;
+}

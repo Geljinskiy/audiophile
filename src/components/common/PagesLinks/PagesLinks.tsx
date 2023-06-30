@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // local imports
 import css from './PagesLinks.module.scss';
-import { ROUTES } from 'utils';
 
 type PageLink = {
   name: string;

@@ -23,7 +23,7 @@ const ProductReviewZX9: React.FC<ProductReviewZX9Props> = ({
           truly remarkable sound
         </p>
         <Button className={css.button__zx9} styling="dark">
-          <Link className={css.link} to={ROUTES.home}>
+          <Link className={css.link} to={'product/ZX9'}>
             See product
           </Link>
         </Button>

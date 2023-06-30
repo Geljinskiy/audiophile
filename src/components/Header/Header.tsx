@@ -8,20 +8,24 @@ import { Logo, BurgerIcon, CartIcon } from 'assets';
 import { pages } from 'data';
 import { VIEWPORT_WIDTH } from 'utils/constants';
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  type?: 'transparent' | 'solid';
+};
+
+const Header: React.FC<HeaderProps> = ({ type = 'solid' }) => {
   const windowWidth = useWindowWidth();
   return (
-    <header className={css.header}>
+    <header className={`${css.header} ${css[type]}`}>
       <Container className={css.header__container}>
         {windowWidth < VIEWPORT_WIDTH.desktop && (
           <IconButton>
             <BurgerIcon className={css.burger} />
           </IconButton>
         )}
-        <Logo />
+        <Logo className={css.logo} />
         {windowWidth >= VIEWPORT_WIDTH.desktop && <PagesLinks pages={pages} />}
-        <IconButton>
-          <CartIcon className={css.cart} />
+        <IconButton className={css.cart}>
+          <CartIcon />
         </IconButton>
       </Container>
     </header>

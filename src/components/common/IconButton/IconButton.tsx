@@ -4,11 +4,12 @@ import React from 'react';
 import css from './IconButton.module.scss';
 
 type IconButtonProps = {
-  children: any;
+  children: React.ReactNode;
+  className?: string;
 };
 
-const IconButton: React.FC<IconButtonProps> = ({ children }) => {
-  return <button className={css.button}>{children}</button>;
+const IconButton: React.FC<IconButtonProps> = ({ className, children }) => {
+  return <button className={`${css.button} ${className}`}>{children}</button>;
 };
 
 export default IconButton;

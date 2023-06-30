@@ -1,12 +1,13 @@
 import { ROUTES } from 'utils/constants';
 
+
 const pages = [
   {
     name: 'home',
     target: ROUTES.home,
   },
   {
-    name: 'headphone',
+    name: 'headphones',
     target: ROUTES.headphones,
   },
   {
@@ -15,7 +16,7 @@ const pages = [
   },
   {
     name: 'earphones',
-    target: ROUTES.checkout,
+    target: ROUTES.earphones,
   },
 ];
 
