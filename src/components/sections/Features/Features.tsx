@@ -1,7 +1,7 @@
 // libs imports
 import React from 'react';
 // local imports
-import { Container, Section, Description } from 'components';
+import { Description } from 'components';
 import css from './Features.module.scss';
 
 type FeaturesProps = {
