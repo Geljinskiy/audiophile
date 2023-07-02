@@ -11,3 +11,4 @@ export * from './ProductLinkSection';
 export * from './Description';
 export * from './GalleryItem';
 export * from './ProductLink';
+export * from './GoBackLink';

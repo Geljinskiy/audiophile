@@ -1,8 +1,27 @@
 @import 'styles/index.scss';
 
-.container {
+.section {
   @include mediaOver('desktop') {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 140px;
+    margin-bottom: 0;
   }
+}
+
+.linkSection {
+  margin: 0;
+  padding: 24px;
+  padding-top: 16px;
+  @include mediaOver('tablet') {
+    padding-top: 48px;
+  }
+  @include mediaOver('desktop') {
+    padding: 38px;
+    padding-top: 80px;
+  }
+}
+
+.link {
+  display: block;
 }

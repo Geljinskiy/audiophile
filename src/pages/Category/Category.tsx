@@ -37,7 +37,6 @@ const Category: React.FC = () => {
     categoryProduct = headphones;
   }
 
-  console.log(categoryProduct[0].productCategory);
 
   return (
     <>
