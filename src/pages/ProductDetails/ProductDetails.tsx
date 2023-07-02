@@ -1,6 +1,6 @@
 // libs imports
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 // local imports
 import {
   AboutUs,
@@ -9,7 +9,12 @@ import {
   ShopLinks,
   Recomendations,
   AboutProduct,
+  GoBackLink,
+  Section,
+  Container,
 } from 'components';
+
+import css from './ProductDetails.module.scss';
 
 import { XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9 } from 'data';
 const products = [XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9];
@@ -44,6 +49,11 @@ const ProductDetails: React.FC = () => {
 
   return (
     <>
+      <Container>
+        <Section className={css.linkSection}>
+          <GoBackLink />
+        </Section>
+      </Container>
       <Product {...product} />
       <AboutProduct description={product.features} stuff={product.inBox} />
       <ProductGallerySection

@@ -15,14 +15,14 @@ const FieldsBlock: React.FC<FieldsBlockProps & { className?: string }> = ({
       {blockName && <h3 className={css.subHeading}>{blockName}</h3>}
       <div className={`${className} ${css.fieldsBlock}`}>
         {fields.map(fieldItem => {
-          console.log(fieldItem);
           //!change
           const isLarge = fieldItem.fullWidth;
+          console.log(isLarge);
           return (
             <FormField
               key={fieldItem.fieldName}
               {...fieldItem}
-              className={`${css.field} ${isLarge && css.largeField}`}
+              className={`${css.field} ${isLarge && css.largeField} `}
             />
           );
         })}

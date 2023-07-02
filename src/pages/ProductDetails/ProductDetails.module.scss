@@ -1,0 +1,14 @@
+@import 'styles/index.scss';
+
+.linkSection {
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 24px;
+  @include mediaOver('tablet') {
+    padding-top: 32px;
+  }
+  @include mediaOver('desktop') {
+    padding-top: 80px;
+    padding-bottom: 56px;
+  }
+}

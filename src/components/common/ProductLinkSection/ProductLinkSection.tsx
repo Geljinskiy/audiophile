@@ -1,6 +1,6 @@
 // libs imports
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // local imports
 import css from './ProductLink.module.scss';
 import { Button, Container, Section } from 'components';
@@ -10,6 +10,7 @@ const ProductLinkSection: React.FC<
   ProductLinkProps & { reverse?: boolean }
 > = ({ productDesc, img, productName, target, newProduct, reverse }) => {
   const { desktopImg, tabletImg, mobileImg } = img;
+  const location = useLocation();
   return (
     <Container>
       <Section className={`${css.section} ${reverse && css.reverse}`}>
@@ -39,7 +40,7 @@ const ProductLinkSection: React.FC<
           <h2 className={css.heading}>{productName}</h2>
           <span className={css.description}>{productDesc}</span>
           <Button className={css.btn} styling="color">
-            <Link className={css.link} to={target}>
+            <Link className={css.link} to={target} state={{ from: location }}>
               See product
             </Link>
           </Button>
