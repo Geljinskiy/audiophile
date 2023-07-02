@@ -26,26 +26,19 @@
 }
 
 .name {
-  //!change later
-  font-size: 15px;
-  line-height: 1.5;
-
   grid-area: 1 / 2 / 2 / 3;
 }
 
 .price {
-  //!change later
-  font-size: 14px;
-  line-height: 1.8;
+  @extend %additional-mini-font;
   opacity: 0.5;
+  display: flex;
+  align-items: center;
 
   grid-area: 2 / 2 / 3 / 3;
 }
 
 .quantity {
-  //!change later
   font-family: 'ManropeBold';
-  font-size: 15px;
-  line-height: 1.5;
   opacity: 0.5;
 }

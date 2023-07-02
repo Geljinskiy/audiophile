@@ -8,7 +8,7 @@
     font-size: 32px;
   }
 
-  @include mediaInBetween("tablet", "desktop"){
+  @include mediaInBetween('tablet', 'desktop') {
     margin-right: 170px;
   }
 }

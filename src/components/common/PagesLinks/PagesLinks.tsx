@@ -16,12 +16,12 @@ type PagesLinksProps = {
 
 const PagesLinks: React.FC<PagesLinksProps> = ({ pages, className }) => {
   return (
-    <ul className={`${css.link_list} ${className ?? ''}`}>
+    <ul className={`${css.linkList} ${className ?? ''}`}>
       {pages.map(page => {
         const { name, target } = page;
         return (
           <li key={name}>
-            <Link className={css.link_list__link} to={target}>
+            <Link className={css.link} to={target}>
               {name}
             </Link>
           </li>

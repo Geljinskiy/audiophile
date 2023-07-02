@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // local imports
 import css from './ProductLink.module.scss';
-import { Button, Container, Section } from 'components';
+import { Button, Container, Description, Section } from 'components';
 import { ProductLinkProps } from 'utils';
 
 const ProductLinkSection: React.FC<
@@ -38,7 +38,7 @@ const ProductLinkSection: React.FC<
         <div className={css.textSide}>
           {newProduct && <span className={css.newProduct}>new product</span>}
           <h2 className={css.heading}>{productName}</h2>
-          <span className={css.description}>{productDesc}</span>
+          <Description className={css.description}>{productDesc!}</Description>
           <Button className={css.btn} styling="color">
             <Link className={css.link} to={target} state={{ from: location }}>
               See product

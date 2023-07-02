@@ -98,9 +98,7 @@
 }
 
 .price {
-  //!Change later
-  font-family: 'ManropeBold';
-  font-size: 18px;
+  @extend %h6-font;
   margin-bottom: 30px;
 }
 

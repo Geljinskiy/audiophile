@@ -46,8 +46,8 @@
 
   margin-bottom: 24px;
 
-  @include mediaUpTo('mobile') {
-    font-size: 36px;
+  @include mediaOver('tablet') {
+    font-size: 56px;
   }
 
   @include mediaOver('desktop') {
@@ -71,13 +71,11 @@
 }
 
 .description {
-  @extend %body-font;
-
   max-width: 350px;
 
-  opacity: 0.75;
-
   margin: 0 auto 28px auto;
+
+  opacity: 0.75;
 
   @include mediaOver('tablet') {
     margin-bottom: 40px;

@@ -5,7 +5,7 @@
 
 %h1-font {
   @extend %h-font;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.03;
   letter-spacing: 2px;
 }
@@ -19,9 +19,9 @@
 
 %h3-font {
   @extend %h-font;
-  font-size: 32px;
-  line-height: 1.12;
-  letter-spacing: 1.15px;
+  font-size: 15px;
+  line-height: normal;
+  letter-spacing: 1.07px;
 }
 
 %h4-font {
@@ -42,7 +42,6 @@
   @extend %h-font;
   font-size: 18px;
   line-height: 1.33;
-  letter-spacing: 1.3px;
 }
 
 %overline-font {
@@ -70,4 +69,9 @@
   font-size: 12px;
   font-family: 'ManropeBold';
   line-height: 1.36;
+}
+
+%additional-mini-font {
+  font-size: 14px;
+  line-height: 1.8;
 }
