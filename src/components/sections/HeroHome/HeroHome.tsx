@@ -16,11 +16,9 @@ const HeroHome: React.FC = (): JSX.Element => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <Button styling="color" className={css.button}>
-            <Link className={css.link} to={'product/XX99'}>
-              See product
-            </Link>
-          </Button>
+          <Link className={css.link} to={'product/XX99MarkII'}>
+            <Button styling="color">See product</Button>
+          </Link>
         </Section>
       </Container>
     </div>

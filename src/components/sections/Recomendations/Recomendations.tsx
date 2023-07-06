@@ -10,6 +10,7 @@ type Recomendation = {
   productName: string;
   target: string;
   productCategory: string;
+  icon: string;
 };
 
 type RecomendationsProps = {
@@ -29,8 +30,6 @@ const Recomendations: React.FC<RecomendationsProps> = ({
         <h2 className={css.heading}>you may also like</h2>
         <ul className={css.list}>
           {products.map((prod, inx) => {
-            const { productName, target, imgWihtoutShadow: img } = prod;
-            const ProductLinkArgs = { img, productName, target };
             const skip = prod.productName === currentProduct.productName;
 
             if (skip) {
@@ -41,8 +40,9 @@ const Recomendations: React.FC<RecomendationsProps> = ({
               return (
                 <ProductLink
                   className={css.listItem}
-                  key={productName}
-                  {...ProductLinkArgs}
+                  key={prod.productName}
+                  {...prod}
+                  img={prod.imgWihtoutShadow}
                 ></ProductLink>
               );
             }

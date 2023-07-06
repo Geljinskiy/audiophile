@@ -22,11 +22,11 @@ const ProductReviewZX9: React.FC<ProductReviewZX9Props> = ({
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound
         </p>
-        <Button className={css.button__zx9} styling="dark">
-          <Link className={css.link} to={'product/ZX9'}>
+        <Link className={css.link} to={'product/ZX9'}>
+          <Button className={css.button__zx9} styling="dark">
             See product
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </div>
   );

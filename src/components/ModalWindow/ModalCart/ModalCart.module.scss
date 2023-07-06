@@ -1,0 +1,45 @@
+@import 'styles/index.scss';
+
+.preventScroll {
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.list {
+  margin-bottom: 32px;
+}
+
+.heading {
+  @extend %h6-font;
+}
+
+.removeButton {
+  text-transform: capitalize;
+  opacity: 0.5;
+}
+
+.total {
+  margin-bottom: 24px;
+}
+
+.button {
+  width: 100%;
+}
+
+.cartEmpty {
+  @extend %h6-font;
+}

@@ -10,4 +10,5 @@ export type ProductLinkProps = {
   newProduct?: boolean;
   productDesc?: string;
   target: string;
+  icon: string;
 };

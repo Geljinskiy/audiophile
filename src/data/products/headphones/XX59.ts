@@ -1,4 +1,4 @@
-import { ProductImage, ROUTES, ProductProps } from 'utils';
+import { ProductImage, ProductProps } from 'utils';
 import {
   XX59Gallery1MobileImg,
   XX59Gallery1DesktopImg,
@@ -15,6 +15,7 @@ import {
   XX59WithoutShadowDesktopImg,
   XX59WithoutShadowMobileImg,
   XX59WithoutShadowTabletImg,
+  XX59MobileImg,
 } from 'assets';
 
 const XX59Images: ProductImage = {
@@ -67,6 +68,7 @@ const XX59: ProductProps = {
   ],
   imgWihtoutShadow: XX59ImagesWithoutShadow,
   productCategory: 'headphones',
+  icon: XX59MobileImg,
 };
 
 export default XX59;

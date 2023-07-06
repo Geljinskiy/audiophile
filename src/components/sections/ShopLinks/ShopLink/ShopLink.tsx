@@ -15,7 +15,7 @@ const ShopLink: React.FC<ShopLinkProps> = ({
   return (
     <li className={className}>
       <NavLink to={target} className={css.linkWrapper}>
-        <picture className={css.picture}>
+        <picture>
           <source
             //! extract media sizes into vars
             media="(max-width: 767.9px)"
@@ -32,7 +32,7 @@ const ShopLink: React.FC<ShopLinkProps> = ({
             width={desktop.width.toString()}
             srcSet={desktop.src}
           />
-          <img src={mobile.src} alt={name} />
+          <img src={mobile.src} alt={name} className={css.picture} />
         </picture>
         <h3 className={css.prodHeading}>{name}</h3>
         <span className={css.button}>

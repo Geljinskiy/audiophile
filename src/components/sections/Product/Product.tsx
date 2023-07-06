@@ -3,7 +3,7 @@ import React from 'react';
 // local imports
 import { Container, Section, Button, FormCunter } from 'components';
 import css from './Product.module.scss';
-import { ProductLinkProps } from 'utils';
+import { ProductLinkProps, setCartItem } from 'utils';
 
 export type ProductProps = ProductLinkProps & {
   price: number;
@@ -16,6 +16,7 @@ const Product: React.FC<ProductProps> = ({
   productName,
   target,
   newProduct,
+  icon,
 }) => {
   const { desktopImg, tabletImg, mobileImg } = img;
 
@@ -49,8 +50,19 @@ const Product: React.FC<ProductProps> = ({
           <span className={css.description}>{productDesc}</span>
           <p className={css.price}>$ {price}</p>
           <div className={css.cartAdding}>
-            <FormCunter fieldValue={1} />
-            <Button className={css.btn} styling="color">
+            {/* <FormCunter fieldValue={1} /> */}
+            <Button
+              className={css.btn}
+              styling="color"
+              onClick={() =>
+                setCartItem({
+                  name: productName,
+                  quantity: 1,
+                  img: icon,
+                  price: price,
+                })
+              }
+            >
               add to cart
             </Button>
           </div>

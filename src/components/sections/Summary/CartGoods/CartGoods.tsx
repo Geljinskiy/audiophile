@@ -21,7 +21,7 @@ const CartGoods: React.FC<CartGoodsProps> = ({ cart }) => {
       {cart.map(item => {
         return (
           <li className={css.listItem} key={item.name}>
-            <CartGood {...item} />
+            <CartGood {...item}  />
           </li>
         );
       })}

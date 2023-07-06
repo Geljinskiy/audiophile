@@ -11,4 +11,5 @@ export type ProductProps = ProductLinkProps & {
   inBox: InBoxType[];
   imgWihtoutShadow: ProductImage;
   productCategory: 'headphones' | 'earphones' | 'speakers';
+  icon: string;
 };
