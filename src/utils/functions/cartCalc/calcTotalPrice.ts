@@ -4,12 +4,13 @@ export type CartItemPrices = {
 };
 
 const calcTotalPrice = (cart: CartItemPrices[]): number => {
-  return cart.reduce(
+  const reducer = cart.reduce(
     (acc: number, curPrice: { price: number; quantity: number }) => {
       return acc + curPrice.price * curPrice.quantity;
     },
     0
   );
+  return Math.round(reducer * 100) / 100;
 };
 
 export default calcTotalPrice;

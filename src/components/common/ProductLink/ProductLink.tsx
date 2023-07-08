@@ -1,5 +1,6 @@
 // libs imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 // local imports
 import { ProductLinkProps } from 'utils';
 import css from './ProductLink.module.scss';
@@ -27,7 +28,9 @@ const ProductLink: React.FC<ProductLinkProps & { className?: string }> = ({
         </picture>
       </div>
       <h3 className={css.heading}>{productName}</h3>
-      <Button styling="color">see product</Button>
+      <Link to={target}>
+        <Button styling="color">see product</Button>
+      </Link>
     </li>
   );
 };

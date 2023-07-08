@@ -18,11 +18,9 @@ const ProductReviewYX1: React.FC<ProductReviewYX1Props> = ({
       <ProductReviewYX1Image />
       <div className={`${className ?? ''} ${css.category__yx1_earphones}`}>
         <h3 className={css.title}>YX1 earphones</h3>
-        <Button styling="light">
-          <Link className={css.link} to={'product/YX1'}>
-            See product
-          </Link>
-        </Button>
+        <Link className={css.link} to={'product/YX1'}>
+          <Button styling="light">See product</Button>
+        </Link>
       </div>
     </div>
   );

@@ -1,12 +1,14 @@
 // libs imports
-import React from 'react';
+import React, { Dispatch, SetStateAction, useState, useEffect } from 'react';
 // local imports
 import { Container, Section, Button, FormCunter } from 'components';
 import css from './Product.module.scss';
-import { ProductLinkProps } from 'utils';
+import { CartItem, ProductLinkProps, setCartItem } from 'utils';
 
 export type ProductProps = ProductLinkProps & {
   price: number;
+  setCart?: Dispatch<SetStateAction<CartItem[]>>;
+  // quantity: number;
 };
 
 const Product: React.FC<ProductProps> = ({
@@ -14,10 +16,24 @@ const Product: React.FC<ProductProps> = ({
   price,
   productDesc,
   productName,
-  target,
   newProduct,
+  icon,
+  setCart,
 }) => {
   const { desktopImg, tabletImg, mobileImg } = img;
+
+  const [quantity, setQuantity] = useState<number>(0);
+
+  useEffect(() => {
+    setQuantity(0);
+  }, [productName]);
+
+  const addGoodhandler = () => {
+    setQuantity(prev => (prev += 1));
+  };
+  const removeGoodhandler = () => {
+    setQuantity(prev => (prev > 0 ? (prev -= 1) : prev));
+  };
 
   return (
     <Container>
@@ -49,8 +65,25 @@ const Product: React.FC<ProductProps> = ({
           <span className={css.description}>{productDesc}</span>
           <p className={css.price}>$ {price}</p>
           <div className={css.cartAdding}>
-            <FormCunter fieldValue={1} />
-            <Button className={css.btn} styling="color">
+            <FormCunter
+              className={css.counter}
+              fieldValue={quantity}
+              addHangler={addGoodhandler}
+              removeHangler={removeGoodhandler}
+            />
+            <Button
+              className={css.btn}
+              styling="color"
+              onClick={() =>
+                setCartItem({
+                  name: productName,
+                  quantity,
+                  img: icon,
+                  price: price,
+                })
+              }
+              disabled={quantity <= 0}
+            >
               add to cart
             </Button>
           </div>

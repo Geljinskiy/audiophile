@@ -4,7 +4,8 @@ type CalcVATParams = {
 };
 
 const calcVAT = ({ taxRate, taxableAmount }: CalcVATParams): number => {
-  return parseFloat((taxableAmount * taxRate).toFixed(2));
+  const vat = taxableAmount * taxRate;
+  return Math.round(vat * 100) / 100;
 };
 
 export default calcVAT;

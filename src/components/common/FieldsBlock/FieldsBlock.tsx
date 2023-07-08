@@ -17,7 +17,6 @@ const FieldsBlock: React.FC<FieldsBlockProps & { className?: string }> = ({
         {fields.map(fieldItem => {
           //!change
           const isLarge = fieldItem.fullWidth;
-          console.log(isLarge);
           return (
             <FormField
               key={fieldItem.fieldName}

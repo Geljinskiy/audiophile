@@ -39,11 +39,11 @@ const ProductLinkSection: React.FC<
           {newProduct && <span className={css.newProduct}>new product</span>}
           <h2 className={css.heading}>{productName}</h2>
           <Description className={css.description}>{productDesc!}</Description>
-          <Button className={css.btn} styling="color">
-            <Link className={css.link} to={target} state={{ from: location }}>
+          <Link className={css.link} to={target} state={{ from: location }}>
+            <Button className={css.btn} styling="color">
               See product
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </div>
       </Section>
     </Container>

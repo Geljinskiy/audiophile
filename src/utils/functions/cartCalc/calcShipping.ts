@@ -7,7 +7,7 @@ const CalcShipping = ({
   shippingPerc,
   totalQuant,
 }: CalcShippingParams): number => {
-  return shippingPerc * totalQuant;
+  return Math.round(shippingPerc * totalQuant * 100) / 100;
 };
 
 export default CalcShipping;
