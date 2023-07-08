@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import {ScrollTop} from 'utils';
 
 import './index.css';
 
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter basename="/audiophile">
+      <ScrollTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>

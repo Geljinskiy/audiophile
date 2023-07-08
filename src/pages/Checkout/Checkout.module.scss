@@ -23,5 +23,13 @@
 
 .backLink {
   margin-bottom: 24px;
+  margin-top: 16px;
   display: block;
+
+  @include mediaOver('tablet') {
+    margin-top: 48px;
+  }
+  @include mediaOver('desktop') {
+    margin-top: 0;
+  }
 }

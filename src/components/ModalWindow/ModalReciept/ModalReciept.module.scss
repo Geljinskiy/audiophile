@@ -1,0 +1,25 @@
+@import 'styles/index.scss';
+
+.modalWrapper {
+  width: 326px;
+  padding: 32px;
+  @include mediaOver('tablet') {
+    width: 100%;
+  }
+}
+
+.heading {
+  @extend %h5-font;
+  margin-bottom: 16px;
+}
+
+.recItems {
+  margin-bottom: 24px;
+}
+
+.descr {
+  margin-bottom: 24px;
+}
+.button {
+  width: 100%;
+}

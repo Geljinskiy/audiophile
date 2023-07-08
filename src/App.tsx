@@ -1,6 +1,6 @@
 // libs imports
 import { Routes, Route } from 'react-router-dom';
-import React from 'react';
+import React, { useEffect } from 'react';
 // local imports
 import { SharedLayout } from 'components';
 import { Checkout, Home, ProductDetails } from 'pages';
@@ -8,6 +8,9 @@ import { ROUTES } from 'utils';
 import { Category } from 'pages/Category';
 
 const App: React.FC = () => {
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
   return (
     <>
       <Routes>

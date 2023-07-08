@@ -1,8 +1,14 @@
 @import 'styles/index.scss';
 
-.preventScroll {
-  overflow: hidden;
+.modalWrapper {
+
+  padding: 32px 28px;
+
+  @include mediaOver('tablet') {
+    width: 377px;
+  }
 }
+
 
 .head {
   display: flex;

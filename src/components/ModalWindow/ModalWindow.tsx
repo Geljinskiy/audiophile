@@ -2,21 +2,31 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 // local imports
-import css from './ModalWindow.module.scss';
-import { ModalCart } from './ModalCart';
 import { Container } from 'components/common';
+import { ModalCart } from './ModalCart';
+import css from './ModalWindow.module.scss';
+import { ModalBurger } from './ModalBurger';
+import { ModalReciept } from './ModalReciept';
+import { ScrollTop } from 'utils';
 
 type ModalWindowProps = {
   isOpen: boolean;
   close: () => void;
+  type: 'cart' | 'burger' | 'reciept';
 };
 const modalRoot = document.getElementById('modal-root')!;
 
-const ModalWindowWrapper = ({ ...props }: ModalWindowProps) => {
-  return createPortal(<ModalWindow {...props} />, modalRoot);
+const ModalWindowWrapper = ({ isOpen, close, type }: ModalWindowProps) => {
+  return createPortal(
+    <>
+      <ScrollTop />
+      <ModalWindow close={close} isOpen={isOpen} type={type} />{' '}
+    </>,
+    modalRoot
+  );
 };
 
-const ModalWindow: React.FC<ModalWindowProps> = ({ isOpen, close }) => {
+const ModalWindow: React.FC<ModalWindowProps> = ({ isOpen, close, type }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handleMouseDown = (event: MouseEvent) => {
@@ -37,29 +47,28 @@ const ModalWindow: React.FC<ModalWindowProps> = ({ isOpen, close }) => {
     };
   }, [isOpen, close]);
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add(css.preventScroll);
-    } else {
-      document.body.classList.remove(css.preventScroll);
-    }
-  }, [isOpen]);
-
   if (!isOpen) {
     return null;
   }
-
   return (
     <div className={css.backdrop}>
-      <Container className={css.container}>
-        <div
-          className={css.modal}
-          onClick={e => e.stopPropagation()}
-          ref={modalRef}
+      <div ref={modalRef}>
+        {type === 'burger' && <ModalBurger />}
+        <Container
+          className={`${css.container} ${
+            type === 'cart' && css.container_cart
+          } ${type === 'reciept' && css.container_reciept}`}
         >
-          <ModalCart close={close}  />
-        </div>
-      </Container>
+          <div
+            className={css.modal}
+            onClick={e => e.stopPropagation()}
+            ref={modalRef}
+          >
+            {type === 'cart' && <ModalCart close={close} />}
+            {type === 'reciept' && <ModalReciept />}
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
