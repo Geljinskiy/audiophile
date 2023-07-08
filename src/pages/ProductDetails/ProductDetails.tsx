@@ -1,5 +1,5 @@
 // libs imports
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 // local imports
 import {
@@ -25,7 +25,10 @@ const ProductDetails: React.FC = () => {
 
   const storageCart =
     (JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]) || [];
-  const [cart, setCart] = useState<CartItem[]>(storageCart);
+
+  const isInCart = (cart: CartItem[]) => {
+    return cart.find(el => el.name.replace(/\s/g, '') === productName);
+  };
 
   let product;
 
@@ -59,7 +62,10 @@ const ProductDetails: React.FC = () => {
           <GoBackLink />
         </Section>
       </Container>
-      <Product {...product} />
+      <Product
+        {...product}
+        cartQuantity={isInCart(storageCart)?.quantity || 1}
+      />
       <AboutProduct description={product.features} stuff={product.inBox} />
       <ProductGallerySection
         images={product.gallery}

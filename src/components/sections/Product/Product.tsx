@@ -7,8 +7,7 @@ import { CartItem, ProductLinkProps, setCartItem } from 'utils';
 
 export type ProductProps = ProductLinkProps & {
   price: number;
-  setCart?: Dispatch<SetStateAction<CartItem[]>>;
-  // quantity: number;
+  cartQuantity: number;
 };
 
 const Product: React.FC<ProductProps> = ({
@@ -18,15 +17,15 @@ const Product: React.FC<ProductProps> = ({
   productName,
   newProduct,
   icon,
-  setCart,
+  cartQuantity,
 }) => {
   const { desktopImg, tabletImg, mobileImg } = img;
 
-  const [quantity, setQuantity] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>(cartQuantity);
 
   useEffect(() => {
-    setQuantity(0);
-  }, [productName]);
+    setQuantity(cartQuantity);
+  }, [cartQuantity]);
 
   const addGoodhandler = () => {
     setQuantity(prev => (prev += 1));
