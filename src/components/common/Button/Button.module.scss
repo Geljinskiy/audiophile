@@ -20,7 +20,7 @@
   text-transform: uppercase;
 
   transition: createTransitionFor('color'),
-    createTransitionFor('background-color');
+    createTransitionFor('background-color'), createTransitionFor('border');
 }
 
 .dark {
@@ -55,4 +55,13 @@
   &:hover {
     color: $main-color;
   }
+}
+
+.disabled,
+.disabled:hover,
+.disabled:focus {
+  background-color: $secondary-light-color;
+  color: $sec-not-focused-color;
+  border: none;
+  cursor: not-allowed;
 }

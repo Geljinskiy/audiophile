@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ type = 'solid' }) => {
   const windowWidth = useWindowWidth();
   return (
     <header className={`${css.header} ${css[type]}`}>
-      <Container className={css.header__container}>
+      <Container className={css.container}>
         {windowWidth < VIEWPORT_WIDTH.desktop && (
           <IconButton>
             <BurgerIcon className={css.burger} />

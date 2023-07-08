@@ -24,7 +24,9 @@ const Button: React.FC<ButtonProps> = ({
     <button
       onClick={onClick}
       type={type}
-      className={`${css.button} ${css[styling]} ${className ?? ''}`}
+      className={`${css.button} ${css[styling]} ${className ?? ''} ${
+        disabled && css.disabled
+      }`}
       disabled={disabled}
     >
       {children}
