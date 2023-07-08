@@ -13,15 +13,16 @@ type CartItem = {
 
 type CartGoodsProps = {
   cart: CartItem[];
+  className?: string;
 };
 
-const CartGoods: React.FC<CartGoodsProps> = ({ cart }) => {
+const CartGoods: React.FC<CartGoodsProps> = ({ cart, className }) => {
   return (
-    <ul className={css.list}>
+    <ul className={`${css.list} ${className}`}>
       {cart.map(item => {
         return (
           <li className={css.listItem} key={item.name}>
-            <CartGood {...item}  />
+            <CartGood {...item} />
           </li>
         );
       })}

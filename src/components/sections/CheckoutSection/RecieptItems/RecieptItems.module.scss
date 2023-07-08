@@ -1,0 +1,50 @@
+@import 'styles/index.scss';
+
+.cartGoods {
+  border-bottom: 1px solid rgba($color: $dark, $alpha: 0.08);
+  text-align: start;
+  margin-bottom: 12px;
+}
+
+.mainWrapper {
+  text-align: center;
+}
+
+.goodsWrapper {
+  background-color: $secondary-light-color;
+  border-radius: 8px 8px;
+  padding: 24px;
+  padding-bottom: 0;
+}
+
+.totalWrapper {
+  background-color: $dark;
+  color: $light;
+  border-radius: 0 0 8px 8px;
+  padding: 24px;
+  text-align: start;
+}
+
+.otherItemsText {
+  @extend %sub-field-font;
+  opacity: 0.5;
+
+  border: none;
+  margin: 0;
+  padding: 12px 46px 24px 46px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.grandTotal {
+  @extend %body-font;
+  font-weight: 500;
+  opacity: 0.5;
+
+  text-transform: uppercase;
+}
+
+.price {
+  @extend %h6-font;
+}

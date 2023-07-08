@@ -1,23 +1,47 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useModal = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
+  const [modalType, setType] = useState<'burger' | 'cart' | 'reciept'>(
+    'burger'
+  );
 
-  const toggle = () => {
-    setOpen(!isOpen);
-  };
-  const open = () => {
-    setOpen(true);
-  };
+  
   const close = () => {
     setOpen(false);
   };
 
+  const openBurger = () => {
+    setOpen(true);
+    setType('burger');
+  };
+
+  const openCart = () => {
+    setOpen(true);
+    setType('cart');
+  };
+
+  const openReciept = () => {
+    setOpen(true);
+    setType('reciept');
+  };
+  
+  useEffect(() => {
+    console.log(isOpen);
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isOpen]);
+
   return {
     isOpen,
-    open,
     close,
-    toggle,
+    openBurger,
+    openCart,
+    openReciept,
+    modalType,
   };
 };
 

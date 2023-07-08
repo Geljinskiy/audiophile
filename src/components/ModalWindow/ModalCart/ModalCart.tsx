@@ -20,11 +20,12 @@ const ModalCart: React.FC<ModalCartProps> = ({ close }) => {
   const len = cart.length;
 
   const resetCart = () => {
+    localStorage.removeItem("cart")
     setCart([]);
   };
 
   return (
-    <>
+    <div className={css.modalWrapper}>
       <div className={css.head}>
         <h2 className={css.heading}>cart({len})</h2>
         {len > 0 && (
@@ -57,7 +58,7 @@ const ModalCart: React.FC<ModalCartProps> = ({ close }) => {
       ) : (
         <p className={css.cartEmpty}>Your cart is empty.</p>
       )}
-    </>
+    </div>
   );
 };
 

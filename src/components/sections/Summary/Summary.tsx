@@ -2,8 +2,8 @@
 import React from 'react';
 import { FormikProps } from 'formik';
 // local imports
+import { useModal } from 'utils';
 import { CartGoods } from './CartGoods';
-import { XX59MobileImg, XX99MKIIMobileImg, YX1MobileImg } from 'assets';
 import { CartPrices } from './CartPrices';
 import {
   calcShipping,
@@ -16,7 +16,7 @@ import {
   FormData,
   CartItem,
 } from 'utils';
-import { Button, CartItemPrice, Container, Section } from 'components/common';
+import { Button, CartItemPrice, Section } from 'components';
 import css from './Summary.module.scss';
 
 const Summary: React.FC<{ formik: FormikProps<FormData> }> = ({ formik }) => {
