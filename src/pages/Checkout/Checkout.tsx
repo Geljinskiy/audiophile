@@ -2,23 +2,15 @@
 import React from 'react';
 // local imports
 import css from './Checkout.module.scss';
-import {
-  CheckoutSection,
-  Summary,
-  Container,
-  Section,
-  GoBackLink,
-} from 'components';
+import { Container, Section, GoBackLink } from 'components';
+import { ChekcoutForm } from 'components/sections/ChekcoutForm';
 
 const Checkout: React.FC = (): JSX.Element => {
   return (
     <Container>
-      <Section className={css.linkSection}>
-        <GoBackLink />
-      </Section>
       <Section className={css.section}>
-        <CheckoutSection />
-        <Summary />
+        <GoBackLink className={css.backLink} />
+        <ChekcoutForm />
       </Section>
     </Container>
   );

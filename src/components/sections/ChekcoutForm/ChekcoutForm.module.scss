@@ -1,0 +1,9 @@
+@import 'styles/index.scss';
+
+.form {
+  @include mediaOver('desktop') {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

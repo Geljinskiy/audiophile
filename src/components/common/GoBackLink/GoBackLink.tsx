@@ -4,11 +4,11 @@ import React from 'react';
 // local imports
 import css from './GoBackLink.module.scss';
 
-const GoBackLink: React.FC = () => {
+const GoBackLink: React.FC<{ className?: string }> = ({ className }) => {
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
   return (
-    <Link className={css.link} to={backLinkHref}>
+    <Link className={`${css.link} ${className}`} to={backLinkHref}>
       Go back
     </Link>
   );
