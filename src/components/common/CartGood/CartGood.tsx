@@ -1,10 +1,9 @@
 // libs imports
-import { useState, Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 // local imports
 import css from './CartGood.module.scss';
 import { FormCunter } from '../FormElements';
 import { CartItem } from 'utils';
-import { MAX_PRODUCT_QUANTITY, MIN_PRODUCT_QUANTITY } from 'utils';
 import { setCartItem } from 'utils';
 
 type IProps = CartItem & {

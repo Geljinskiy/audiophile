@@ -28,8 +28,11 @@
 }
 
 .removeButton {
-  text-transform: capitalize;
   opacity: 0.5;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .total {

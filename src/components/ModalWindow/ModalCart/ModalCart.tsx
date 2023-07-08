@@ -16,14 +16,24 @@ const ModalCart: React.FC<ModalCartProps> = ({ close }) => {
     (JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]) || [];
   const [cart, setCart] = useState<CartItem[]>(storageCart);
 
+
   const total = calcTotalPrice(cart);
   const len = cart.length;
+
+
 
   return (
     <>
       <div className={css.head}>
         <h2 className={css.heading}>cart({len})</h2>
-        {len > 0 && <span className={css.removeButton}>remove all</span>}
+        {len > 0 && (
+          <button
+            // onClick={() => localStorage.removeItem('cart')}
+            className={css.removeButton}
+          >
+            Remove all
+          </button>
+        )}
       </div>
       {len > 0 ? (
         <>

@@ -3,6 +3,7 @@ import React from 'react';
 // local imports
 import { CartGoods } from './CartGoods';
 import { XX59MobileImg, XX99MKIIMobileImg, YX1MobileImg } from 'assets';
+import { CartItem } from 'utils';
 import { CartPrices } from './CartPrices';
 import {
   calcShipping,
@@ -16,14 +17,11 @@ import {
 import { Button, CartItemPrice, Container, Section } from 'components/common';
 import css from './Summary.module.scss';
 
-// !temp solution
-const cart = [
-  { name: 'XX99 MK II', price: 2_999, img: XX59MobileImg, quantity: 1 },
-  { name: 'XX59', price: 899, img: XX99MKIIMobileImg, quantity: 2 },
-  { name: 'YX1', price: 599, img: YX1MobileImg, quantity: 1 },
-];
 
 const Summary: React.FC = () => {
+  const cart =
+    (JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]) || [];
+
   const total = calcTotalPrice(cart);
   const shipping = calcShipping({
     shippingPerc: SHIPPING,

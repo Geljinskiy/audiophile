@@ -1,5 +1,5 @@
 // libs imports
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 // local imports
 import {
@@ -17,10 +17,15 @@ import {
 import css from './ProductDetails.module.scss';
 
 import { XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9 } from 'data';
+import { CartItem } from 'utils';
 const products = [XX59, XX99MarkI, XX99MarkII, YX1, ZX7, ZX9];
 
 const ProductDetails: React.FC = () => {
   const { productName } = useParams<{ productName: string }>();
+
+  const storageCart =
+    (JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]) || [];
+  const [cart, setCart] = useState<CartItem[]>(storageCart);
 
   let product;
 
