@@ -13,7 +13,7 @@ const SharedLayout: React.FC = (): JSX.Element => {
   return (
     <>
       <Header type={isHomePage ? 'transparent' : 'solid'} />
-      <main className={isCheckoutPage && css.checkoutBg}>
+      <main className={isCheckoutPage ? css.checkoutBg : ''}>
         <Outlet />
       </main>
       <Footer />

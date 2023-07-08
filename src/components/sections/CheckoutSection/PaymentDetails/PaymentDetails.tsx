@@ -1,13 +1,17 @@
 // libs imports
 import React from 'react';
 import { useState } from 'react';
+import { FormikProps } from 'formik';
 // local imports
-import { FieldsBlock, FormField, FormRadio } from 'components/common';
+import { FieldsBlock, FormRadio } from 'components/common';
 import { eMoney } from '../checkoutFields';
 import { CashPaymentIcon } from 'assets';
 import css from './PaymentDetails.module.scss';
+import { FormData } from 'utils';
 
-const PaymentDetails: React.FC = () => {
+const PaymentDetails: React.FC<{ formik: FormikProps<FormData> }> = ({
+  formik,
+}) => {
   const [selectedMethod, setSelectedMethod] = useState<string>('');
 
   const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +41,9 @@ const PaymentDetails: React.FC = () => {
         </div>
       </div>
 
-      {selectedMethod === 'e-Money' && <FieldsBlock fields={eMoney} />}
+      {selectedMethod === 'e-Money' && (
+        <FieldsBlock fields={eMoney} formik={formik} />
+      )}
 
       {selectedMethod === 'Cash on Delivery' && (
         <div className={css.paymentOption}>

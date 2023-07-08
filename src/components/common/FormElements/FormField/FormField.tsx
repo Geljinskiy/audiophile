@@ -9,6 +9,7 @@ type FormFieldProps = {
   fieldValue?: string | number;
   error?: boolean;
   className?: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
 };
 
 const FormField: React.FC<FormFieldProps> = ({
@@ -17,6 +18,7 @@ const FormField: React.FC<FormFieldProps> = ({
   fieldValue,
   error = false,
   className,
+  onChange,
 }): JSX.Element => {
   return (
     <label className={`${className} ${css.label}`}>
@@ -27,6 +29,7 @@ const FormField: React.FC<FormFieldProps> = ({
         type="text"
         name={fieldName}
         value={fieldValue}
+        onChange={onChange}
         placeholder={placeholder}
         className={`${css.input} ${error && css.input__notValid}`}
       />

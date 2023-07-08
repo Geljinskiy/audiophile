@@ -1,9 +1,9 @@
 // libs imports
 import React from 'react';
+import { FormikProps } from 'formik';
 // local imports
 import { CartGoods } from './CartGoods';
 import { XX59MobileImg, XX99MKIIMobileImg, YX1MobileImg } from 'assets';
-import { CartItem } from 'utils';
 import { CartPrices } from './CartPrices';
 import {
   calcShipping,
@@ -13,12 +13,13 @@ import {
   SHIPPING,
   goodsQuantity,
   calcGrandTotal,
+  FormData,
+  CartItem,
 } from 'utils';
 import { Button, CartItemPrice, Container, Section } from 'components/common';
 import css from './Summary.module.scss';
 
-
-const Summary: React.FC = () => {
+const Summary: React.FC<{ formik: FormikProps<FormData> }> = ({ formik }) => {
   const cart =
     (JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]) || [];
 
@@ -46,7 +47,7 @@ const Summary: React.FC = () => {
         value={calcGrandTotal([total, shipping, vat])}
         className={css.totalPrice}
       />
-      <Button styling="color" className={css.button}>
+      <Button styling="color" className={css.button} type="submit">
         Continue & pay
       </Button>
     </Section>
