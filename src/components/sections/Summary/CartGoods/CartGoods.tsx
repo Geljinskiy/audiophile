@@ -1,5 +1,5 @@
 // libs imports
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 // local imports
 import css from './CartGoods.module.scss';
 import { CartGood } from 'components';
@@ -14,15 +14,22 @@ type CartItem = {
 type CartGoodsProps = {
   cart: CartItem[];
   className?: string;
+  counter?: boolean;
+  setCart?: Dispatch<SetStateAction<CartItem[]>>;
 };
 
-const CartGoods: React.FC<CartGoodsProps> = ({ cart, className }) => {
+const CartGoods: React.FC<CartGoodsProps> = ({
+  cart,
+  className,
+  counter = false,
+  setCart,
+}) => {
   return (
     <ul className={`${css.list} ${className}`}>
       {cart.map(item => {
         return (
           <li className={css.listItem} key={item.name}>
-            <CartGood {...item} />
+            <CartGood {...item} counter={counter} setCart={setCart} />
           </li>
         );
       })}

@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const useModal = () => {
@@ -5,8 +6,8 @@ const useModal = () => {
   const [modalType, setType] = useState<'burger' | 'cart' | 'reciept'>(
     'burger'
   );
+  const location = useLocation();
 
-  
   const close = () => {
     setOpen(false);
   };
@@ -25,15 +26,18 @@ const useModal = () => {
     setOpen(true);
     setType('reciept');
   };
-  
+
   useEffect(() => {
-    console.log(isOpen);
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   return {
     isOpen,

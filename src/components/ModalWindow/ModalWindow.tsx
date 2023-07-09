@@ -28,6 +28,7 @@ const ModalWindowWrapper = ({ isOpen, close, type }: ModalWindowProps) => {
 
 const ModalWindow: React.FC<ModalWindowProps> = ({ isOpen, close, type }) => {
   const modalRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleMouseDown = (event: MouseEvent) => {
       if (

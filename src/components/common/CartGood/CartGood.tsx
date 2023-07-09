@@ -1,5 +1,6 @@
 // libs imports
 import { Dispatch, SetStateAction } from 'react';
+import { Link } from 'react-router-dom';
 // local imports
 import css from './CartGood.module.scss';
 import { FormCunter } from '../FormElements';
@@ -8,7 +9,7 @@ import { setCartItem } from 'utils';
 
 type IProps = CartItem & {
   setCart?: Dispatch<SetStateAction<CartItem[]>>;
-  counter?: boolean;
+  counter: boolean;
 };
 
 const CartGood = ({ name, price, img, quantity, counter, setCart }: IProps) => {

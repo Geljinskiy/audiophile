@@ -1,14 +1,12 @@
 @import 'styles/index.scss';
 
 .modalWrapper {
-
   padding: 32px 28px;
 
   @include mediaOver('tablet') {
     width: 377px;
   }
 }
-
 
 .head {
   display: flex;
@@ -34,6 +32,7 @@
 }
 
 .removeButton {
+  color: inherit;
   opacity: 0.5;
   padding: 0;
   background-color: transparent;

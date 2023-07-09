@@ -4,13 +4,17 @@
   width: 326px;
   padding: 32px;
   @include mediaOver('tablet') {
-    width: 100%;
+    width: 540px;
   }
 }
 
 .heading {
   @extend %h5-font;
   margin-bottom: 16px;
+  @include mediaOver('tablet') {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
 }
 
 .recItems {
@@ -19,7 +23,18 @@
 
 .descr {
   margin-bottom: 24px;
+  @include mediaOver('tablet') {
+    margin-bottom: 32px;
+  }
 }
+
 .button {
   width: 100%;
+}
+
+.svg {
+  margin-bottom: 22px;
+  @include mediaOver('tablet') {
+    margin-bottom: 32px;
+  }
 }
