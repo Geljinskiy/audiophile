@@ -5,10 +5,18 @@
   border: none;
   cursor: pointer;
   color: inherit;
+  padding: 0;
   transition: createTransitionFor('color'),
     createTransitionFor('background-color');
 
   &:hover {
-    color:$main-color
+    color: $main-color;
+  }
+}
+
+.disabled {
+  &:hover {
+    color: inherit;
+    cursor: auto;
   }
 }

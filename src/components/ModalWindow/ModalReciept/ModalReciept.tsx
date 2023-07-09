@@ -24,8 +24,8 @@ const ModalReciept: React.FC<ModalRecieptProps> = () => {
 
   return (
     <div className={css.modalWrapper}>
-      <TickIcon />
-      <h2 className={css.heading}>thank you for order</h2>
+      <TickIcon className={css.svg} />
+      <h2 className={css.heading}>thank you for your order</h2>
       <Description className={css.descr}>
         You will receive an email confirmation shortly.
       </Description>

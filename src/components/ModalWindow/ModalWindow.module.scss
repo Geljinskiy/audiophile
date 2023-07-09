@@ -1,28 +1,34 @@
 @import 'styles/index.scss';
 
-.preventScroll {
-  overflow: hidden;
-}
-
 .modal {
   position: absolute;
   height: fit-content;
 
   margin-top: 24px;
 
-  border-radius: 8px;
-  background: $light;
   color: $dark;
+  padding-bottom: 154px;
+
+  //!change
+  & > div {
+    background-color: $light;
+    border-radius: 8px;
+  }
 }
 
 .backdrop {
   position: absolute;
   width: 100%;
   height: 100vh;
+  bottom: 300px;
+  top: 0px;
   top: 90px;
   left: 0;
+  padding-bottom: 111px;
 
   background: rgba(0, 0, 0, 0.4);
+
+  overflow-y: auto;
 }
 
 .container {

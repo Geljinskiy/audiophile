@@ -6,6 +6,7 @@ import { ROUTES, CartItem } from 'utils';
 import css from './ModalCart.module.scss';
 import { Button, CartGood, CartItemPrice } from 'components';
 import { calcTotalPrice } from 'utils';
+import { CartGoods } from 'components/sections/Summary/CartGoods';
 
 type ModalCartProps = {
   close: () => void;
@@ -20,7 +21,7 @@ const ModalCart: React.FC<ModalCartProps> = ({ close }) => {
   const len = cart.length;
 
   const resetCart = () => {
-    localStorage.removeItem("cart")
+    localStorage.removeItem('cart');
     setCart([]);
   };
 
@@ -29,25 +30,14 @@ const ModalCart: React.FC<ModalCartProps> = ({ close }) => {
       <div className={css.head}>
         <h2 className={css.heading}>cart({len})</h2>
         {len > 0 && (
-          <button
-            onClick={resetCart}
-            className={css.removeButton}
-          >
+          <button onClick={resetCart} className={css.removeButton}>
             Remove all
           </button>
         )}
       </div>
       {len > 0 ? (
         <>
-          <ul className={css.list}>
-            {cart.map(item => {
-              return (
-                <li key={item.name} className={css.listItem}>
-                  <CartGood {...item} setCart={setCart} counter={true} />
-                </li>
-              );
-            })}
-          </ul>
+          <CartGoods cart={cart} counter={true} setCart={setCart} />
           <CartItemPrice name="total" value={total} className={css.total} />
           <Link to={ROUTES.checkout} onClick={close}>
             <Button styling="color" className={css.button}>
