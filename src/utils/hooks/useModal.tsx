@@ -27,7 +27,6 @@ const useModal = () => {
   };
   
   useEffect(() => {
-    console.log(isOpen);
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {

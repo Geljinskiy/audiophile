@@ -7,10 +7,7 @@ import { Checkout, Home, ProductDetails } from 'pages';
 import { ROUTES } from 'utils';
 import { Category } from 'pages/Category';
 
-const App: React.FC = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // });
+const App: React.FC = () => { 
   return (
     <>
       <Routes>

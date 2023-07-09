@@ -15,6 +15,7 @@ import {
   calcGrandTotal,
   FormData,
   CartItem,
+  commaDivision,
 } from 'utils';
 import { Button, CartItemPrice, Section } from 'components';
 import css from './Summary.module.scss';
@@ -24,6 +25,8 @@ const Summary: React.FC<{ formik: FormikProps<FormData> }> = ({ formik }) => {
     (JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]) || [];
 
   const total = calcTotalPrice(cart);
+  const totalFormated = commaDivision(total);
+
   const shipping = calcShipping({
     shippingPerc: SHIPPING,
     totalQuant: goodsQuantity(cart),
