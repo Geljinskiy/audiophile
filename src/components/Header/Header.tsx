@@ -1,5 +1,5 @@
 // libs imports
-import React from 'react';
+import React, { useRef } from 'react';
 // local imports
 import { useWindowWidth, useModal, VIEWPORT_WIDTH } from 'utils';
 import css from './Header.module.scss';
@@ -16,6 +16,7 @@ const Header: React.FC<HeaderProps> = ({ type = 'solid' }) => {
   const { isOpen, close, openBurger, openCart, modalType } = useModal();
 
   const windowWidth = useWindowWidth();
+
   return (
     <header className={`${css.header} ${css[type]}`}>
       <Container className={css.container}>
@@ -39,7 +40,10 @@ const Header: React.FC<HeaderProps> = ({ type = 'solid' }) => {
         )}
         <Logo className={css.logo} />
         {windowWidth >= VIEWPORT_WIDTH.desktop && <PagesLinks pages={pages} />}
-        <IconButton className={css.cart} onButtonClick={openCart}>
+        <IconButton
+          className={css.cart}
+          onButtonClick={openCart}
+        >
           <CartIcon />
         </IconButton>
         {isOpen && (

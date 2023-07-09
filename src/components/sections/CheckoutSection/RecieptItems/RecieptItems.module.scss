@@ -8,13 +8,25 @@
 
 .mainWrapper {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  
+  @include mediaOver('tablet') {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .goodsWrapper {
   background-color: $secondary-light-color;
-  border-radius: 8px 8px;
+  border-radius: 8px 8px 0 0;
   padding: 24px;
   padding-bottom: 0;
+  @include mediaOver('tablet') {
+    border-radius: 8px 0 0 8px;
+    width: 246px;
+  }
 }
 
 .totalWrapper {
@@ -23,6 +35,10 @@
   border-radius: 0 0 8px 8px;
   padding: 24px;
   text-align: start;
+  @include mediaOver('tablet') {
+    border-radius: 0 8px 8px 0;
+    width: 198px;
+  }
 }
 
 .otherItemsText {
@@ -35,12 +51,17 @@
   background: none;
   color: inherit;
   cursor: pointer;
+
+  @include mediaOver('tablet') {
+    border-radius: 8px 0 0 8px;
+  }
 }
 
 .grandTotal {
   @extend %body-font;
   font-weight: 500;
   opacity: 0.5;
+  margin-bottom: 8px;
 
   text-transform: uppercase;
 }
