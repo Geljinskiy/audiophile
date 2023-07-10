@@ -1,6 +1,5 @@
 // libs imports
 import React from 'react';
-import { useFormik } from 'formik';
 import { FormikProps } from 'formik';
 // local imports
 import { FieldsBlock, Section } from 'components';

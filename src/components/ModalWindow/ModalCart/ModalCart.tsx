@@ -1,10 +1,10 @@
 // libs imports
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // local imports
-import { ROUTES, CartItem } from 'utils';
+import { ROUTES, CartItem, ProductProps } from 'utils';
 import css from './ModalCart.module.scss';
-import { Button, CartGood, CartItemPrice } from 'components';
+import { Button, CartItemPrice } from 'components';
 import { calcTotalPrice } from 'utils';
 import { CartGoods } from 'components/sections/Summary/CartGoods';
 

@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import { CheckoutSection } from '../CheckoutSection';
 import { Summary } from '../Summary';
 import css from './ChekcoutForm.module.scss';
-import { useModal } from 'utils';
+import { useModal, FormData } from 'utils';
 import { ModalWindow } from 'components';
 
 const ChekcoutForm = () => {
@@ -21,7 +21,7 @@ const ChekcoutForm = () => {
       country: '',
       emoneyNum: '',
       emoneyPin: '',
-    },
+    } as FormData,
     onSubmit: openReciept,
   });
 

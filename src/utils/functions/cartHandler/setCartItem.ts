@@ -9,20 +9,24 @@ const setCartItem = (item: CartItem) => {
 
   const parsedCart = JSON.parse(prevCart) as CartItem[];
 
-  const duplCheck = parsedCart.find((el: CartItem) => el.name === item.name);
+  const duplCheck = parsedCart.find(
+    (el: CartItem) => el.productName === item.productName
+  );
 
   if (!duplCheck) {
     return localStorage.setItem('cart', JSON.stringify([...parsedCart, item]));
   }
 
-  if (!item.quantity) {
+  if (!item.productQuantity) {
     return localStorage.setItem(
       'cart',
-      JSON.stringify(parsedCart.filter(prev => item.name !== prev.name))
+      JSON.stringify(
+        parsedCart.filter(prev => item.productName !== prev.productName)
+      )
     );
   }
 
-  duplCheck.quantity = item.quantity;
+  duplCheck.productQuantity = item.productQuantity;
 
   return localStorage.setItem('cart', JSON.stringify(parsedCart));
 };

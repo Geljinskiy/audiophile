@@ -1,14 +1,12 @@
-export type ProductImage = {
-  mobileImg: string;
-  tabletImg: string;
-  desktopImg: string;
-};
+import { ProductImage } from './productImageType';
 
 export type ProductLinkProps = {
-  img: ProductImage;
+  productImage: ProductImage;
   productName: string;
-  newProduct?: boolean;
-  productDesc?: string;
-  target: string;
-  icon: string;
+  productTarget: string;
+};
+
+export type FullProductLinkProps  = ProductLinkProps & {
+  newProduct: boolean;
+  productDesc: string;
 };

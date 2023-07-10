@@ -6,11 +6,13 @@ import { ProductImage, sortByCategory } from 'utils';
 import css from './Recomendations.module.scss';
 
 type Recomendation = {
-  imgWihtoutShadow: ProductImage;
+  productImgWihtoutShadow: ProductImage;
   productName: string;
-  target: string;
+  productTarget: string;
   productCategory: string;
-  icon: string;
+  // productIcon: string;
+  // productDesc: string;
+  // newProduct: boolean;
 };
 
 type RecomendationsProps = {
@@ -42,7 +44,7 @@ const Recomendations: React.FC<RecomendationsProps> = ({
                   className={css.listItem}
                   key={prod.productName}
                   {...prod}
-                  img={prod.imgWihtoutShadow}
+                  productImage={prod.productImgWihtoutShadow}
                 ></ProductLink>
               );
             }

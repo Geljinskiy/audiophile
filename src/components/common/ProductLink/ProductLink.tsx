@@ -6,13 +6,15 @@ import { ProductLinkProps } from 'utils';
 import css from './ProductLink.module.scss';
 import { Button } from '../Button';
 
+
+
 const ProductLink: React.FC<ProductLinkProps & { className?: string }> = ({
-  img,
+  productImage,
   productName,
-  target,
+  productTarget,
   className,
 }) => {
-  const { desktopImg, mobileImg, tabletImg } = img;
+  const { desktopImg, mobileImg, tabletImg } = productImage;
   return (
     <li className={className}>
       <div className={css.imageWrap}>
@@ -28,7 +30,7 @@ const ProductLink: React.FC<ProductLinkProps & { className?: string }> = ({
         </picture>
       </div>
       <h3 className={css.heading}>{productName}</h3>
-      <Link to={target}>
+      <Link to={productTarget}>
         <Button styling="color">see product</Button>
       </Link>
     </li>

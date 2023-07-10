@@ -1,25 +1,40 @@
 // libs imports
 import { Dispatch, SetStateAction } from 'react';
-import { Link } from 'react-router-dom';
 // local imports
 import css from './CartGood.module.scss';
 import { FormCunter } from '../FormElements';
 import { CartItem } from 'utils';
 import { setCartItem } from 'utils';
 
-type IProps = CartItem & {
+type CartGoodProps = CartItem & {
   setCart?: Dispatch<SetStateAction<CartItem[]>>;
   counter: boolean;
+  productIcon: string;
 };
 
-const CartGood = ({ name, price, img, quantity, counter, setCart }: IProps) => {
+const CartGood = ({
+  productName,
+  productPrice,
+  productQuantity,
+  counter,
+  productIcon,
+  setCart,
+}: CartGoodProps) => {
   const addGoodhandler = () => {
-    const item = { name, quantity: quantity + 1, price, img };
+    const item = {
+      productName,
+      productQuantity: productQuantity + 1,
+      productPrice,
+    };
     setCartItem(item);
     setCart?.(JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]);
   };
   const removeGoodhandler = () => {
-    const item = { name, price, quantity: quantity - 1, img };
+    const item = {
+      productName,
+      productPrice,
+      productQuantity: productQuantity - 1,
+    };
     setCartItem(item);
     setCart?.(JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]);
   };
@@ -27,19 +42,24 @@ const CartGood = ({ name, price, img, quantity, counter, setCart }: IProps) => {
     <>
       <div className={css.goodInf}>
         <div className={css.imageWrap}>
-          <img width={36} className={css.image} src={img} alt={name} />
+          <img
+            width={36}
+            className={css.image}
+            src={productIcon}
+            alt={productName}
+          />
         </div>
-        <p className={css.name}>{name}</p>
-        <span className={css.price}>$ {price}</span>
+        <p className={css.name}>{productName}</p>
+        <span className={css.price}>$ {productPrice}</span>
       </div>
       {counter ? (
         <FormCunter
-          fieldValue={quantity}
+          fieldValue={productQuantity}
           addHangler={addGoodhandler}
           removeHangler={removeGoodhandler}
         />
       ) : (
-        <span className={css.quantity}>x{quantity}</span>
+        <span className={css.quantity}>x{productQuantity}</span>
       )}
     </>
   );
