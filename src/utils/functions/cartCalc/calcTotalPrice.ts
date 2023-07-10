@@ -1,12 +1,15 @@
 export type CartItemPrices = {
-  price: number;
-  quantity: number;
+  productPrice: number;
+  productQuantity: number;
 };
 
 const calcTotalPrice = (cart: CartItemPrices[]): number => {
   const reducer = cart.reduce(
-    (acc: number, curPrice: { price: number; quantity: number }) => {
-      return acc + curPrice.price * curPrice.quantity;
+    (
+      acc: number,
+      curPrice: { productPrice: number; productQuantity: number }
+    ) => {
+      return acc + curPrice.productPrice * curPrice.productQuantity;
     },
     0
   );

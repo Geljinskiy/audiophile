@@ -3,23 +3,17 @@ import React, { Dispatch, SetStateAction, useState, useEffect } from 'react';
 // local imports
 import { Container, Section, Button, FormCunter } from 'components';
 import css from './Product.module.scss';
-import { CartItem, ProductLinkProps, setCartItem } from 'utils';
+import { ProductProps, ProductLinkProps, setCartItem } from 'utils';
 
-export type ProductProps = ProductLinkProps & {
-  price: number;
-  cartQuantity: number;
-};
-
-const Product: React.FC<ProductProps> = ({
-  img,
-  price,
+const Product: React.FC<ProductProps & { cartQuantity: number }> = ({
+  productImage,
+  productPrice,
   productDesc,
   productName,
   newProduct,
-  icon,
   cartQuantity,
 }) => {
-  const { desktopImg, tabletImg, mobileImg } = img;
+  const { desktopImg, tabletImg, mobileImg } = productImage;
 
   const [quantity, setQuantity] = useState<number>(cartQuantity);
 
@@ -62,7 +56,7 @@ const Product: React.FC<ProductProps> = ({
           {newProduct && <span className={css.newProduct}>new product</span>}
           <h1 className={css.heading}>{productName}</h1>
           <span className={css.description}>{productDesc}</span>
-          <p className={css.price}>$ {price}</p>
+          <p className={css.price}>$ {productPrice}</p>
           <div className={css.cartAdding}>
             <FormCunter
               className={css.counter}
@@ -75,10 +69,9 @@ const Product: React.FC<ProductProps> = ({
               styling="color"
               onClick={() =>
                 setCartItem({
-                  name: productName,
-                  quantity,
-                  img: icon,
-                  price: price,
+                  productName,
+                  productQuantity: quantity,
+                  productPrice,
                 })
               }
               disabled={quantity <= 0}

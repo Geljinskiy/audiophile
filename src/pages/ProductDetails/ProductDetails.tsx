@@ -27,7 +27,7 @@ const ProductDetails: React.FC = () => {
     (JSON.parse(localStorage.getItem('cart') || '[]') as CartItem[]) || [];
 
   const isInCart = (cart: CartItem[]) => {
-    return cart.find(el => el.name.replace(/\s/g, '') === productName);
+    return cart.find(el => el.productName.replace(/\s/g, '') === productName);
   };
 
   let product;
@@ -64,11 +64,14 @@ const ProductDetails: React.FC = () => {
       </Container>
       <Product
         {...product}
-        cartQuantity={isInCart(storageCart)?.quantity || 1}
+        cartQuantity={isInCart(storageCart)?.productQuantity || 1}
       />
-      <AboutProduct description={product.features} stuff={product.inBox} />
+      <AboutProduct
+        description={product.productFeatures}
+        stuff={product.poroductInBox}
+      />
       <ProductGallerySection
-        images={product.gallery}
+        images={product.productGallery}
         productName={product.productName}
       />
       <Recomendations products={products} currentProduct={product} />

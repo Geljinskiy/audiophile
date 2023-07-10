@@ -4,11 +4,18 @@ import { Link, useLocation } from 'react-router-dom';
 // local imports
 import css from './ProductLink.module.scss';
 import { Button, Container, Description, Section } from 'components';
-import { ProductLinkProps } from 'utils';
+import { FullProductLinkProps } from 'utils';
 
 const ProductLinkSection: React.FC<
-  ProductLinkProps & { reverse?: boolean }
-> = ({ productDesc, img, productName, target, newProduct, reverse }) => {
+  FullProductLinkProps & { reverse?: boolean }
+> = ({
+  productDesc,
+  productImage: img,
+  productName,
+  productTarget: target,
+  newProduct,
+  reverse,
+}) => {
   const { desktopImg, tabletImg, mobileImg } = img;
   const location = useLocation();
   return (

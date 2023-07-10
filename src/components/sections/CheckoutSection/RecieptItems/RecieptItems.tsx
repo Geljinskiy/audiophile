@@ -20,7 +20,7 @@ const RecieptItems: React.FC<RecieptItemsProps> = ({ className, cart }) => {
     setShowAllItems(!showAllItems);
   };
 
-  const total = calcGrandTotal(cart.map(el => el.price));
+  const total = calcGrandTotal(cart.map(el => el.productPrice));
 
   return (
     <div className={`${className} ${css.mainWrapper}`}>
@@ -32,7 +32,9 @@ const RecieptItems: React.FC<RecieptItemsProps> = ({ className, cart }) => {
             className={css.otherItemsText}
             onClick={handleShowItems}
           >
-            {!showAllItems ? `show ${cart.length-1} other item(s)` : 'show less'}
+            {!showAllItems
+              ? `show ${cart.length - 1} other item(s)`
+              : 'show less'}
           </button>
         )}
       </div>

@@ -3,13 +3,8 @@ import React, { Dispatch, SetStateAction } from 'react';
 // local imports
 import css from './CartGoods.module.scss';
 import { CartGood } from 'components';
-
-type CartItem = {
-  name: string;
-  price: number;
-  img: string;
-  quantity: number;
-};
+import { products } from 'data';
+import { CartItem } from 'utils';
 
 type CartGoodsProps = {
   cart: CartItem[];
@@ -27,9 +22,17 @@ const CartGoods: React.FC<CartGoodsProps> = ({
   return (
     <ul className={`${css.list} ${className}`}>
       {cart.map(item => {
+        const curProd = products.filter(
+          prod => prod.productName === item.productName
+        )[0];
         return (
-          <li className={css.listItem} key={item.name}>
-            <CartGood {...item} counter={counter} setCart={setCart} />
+          <li className={css.listItem} key={item.productName}>
+            <CartGood
+              productQuantity={item.productQuantity}
+              {...curProd}
+              counter={counter}
+              setCart={setCart}
+            />
           </li>
         );
       })}
