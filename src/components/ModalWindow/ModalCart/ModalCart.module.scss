@@ -2,6 +2,7 @@
 
 .modalWrapper {
   padding: 32px 28px;
+  margin-top: 24px;
 
   @include mediaOver('tablet') {
     width: 377px;
