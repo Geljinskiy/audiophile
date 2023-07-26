@@ -6,7 +6,6 @@ import css from './Header.module.scss';
 import { Container, PagesLinks, IconButton, ModalWindow } from 'components';
 import { Logo, BurgerIcon, CartIcon } from 'assets';
 import { pages } from 'data';
-import {} from 'utils';
 
 type HeaderProps = {
   type?: 'transparent' | 'solid';
@@ -22,9 +21,15 @@ const Header: React.FC<HeaderProps> = ({ type = 'solid' }) => {
       <Container className={css.container}>
         {windowWidth < VIEWPORT_WIDTH.desktop && (
           <>
-            <IconButton onButtonClick={openBurger}>
-              <BurgerIcon className={css.burger} />
-            </IconButton>
+            {isOpen ? (
+              <IconButton disabled={true}>
+                <BurgerIcon className={css.burger} />
+              </IconButton>
+            ) : (
+              <IconButton onButtonClick={openBurger}>
+                <BurgerIcon className={css.burger} />
+              </IconButton>
+            )}
             {isOpen && (
               <ModalWindow
                 isOpen={
@@ -40,12 +45,15 @@ const Header: React.FC<HeaderProps> = ({ type = 'solid' }) => {
         )}
         <Logo className={css.logo} />
         {windowWidth >= VIEWPORT_WIDTH.desktop && <PagesLinks pages={pages} />}
-        <IconButton
-          className={css.cart}
-          onButtonClick={openCart}
-        >
-          <CartIcon />
-        </IconButton>
+        {isOpen ? (
+          <IconButton disabled={true}>
+            <CartIcon className={css.cart} />
+          </IconButton>
+        ) : (
+          <IconButton onButtonClick={openCart}>
+            <CartIcon className={css.cart} />
+          </IconButton>
+        )}
         {isOpen && (
           <ModalWindow
             isOpen={isOpen && modalType === 'cart'}

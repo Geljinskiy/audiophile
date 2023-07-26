@@ -6,6 +6,7 @@
   cursor: pointer;
   color: inherit;
   padding: 0;
+  margin: 0;
   transition: createTransitionFor('color'),
     createTransitionFor('background-color');
 
@@ -15,6 +16,8 @@
 }
 
 .disabled {
+  color: $main-color;
+  pointer-events: none;
   &:hover {
     color: inherit;
     cursor: auto;
