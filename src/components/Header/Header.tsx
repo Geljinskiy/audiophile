@@ -1,9 +1,9 @@
 // libs imports
-import React, { useRef } from 'react';
+import React from 'react';
 // local imports
 import { useWindowWidth, useModal, VIEWPORT_WIDTH } from 'utils';
 import css from './Header.module.scss';
-import { Container, PagesLinks, IconButton, ModalWindow } from 'components';
+import { Container, HeaderPLinks, IconButton, ModalWindow } from 'components';
 import { Logo, BurgerIcon, CartIcon } from 'assets';
 import { pages } from 'data';
 
@@ -44,7 +44,9 @@ const Header: React.FC<HeaderProps> = ({ type = 'solid' }) => {
           </>
         )}
         <Logo className={css.logo} />
-        {windowWidth >= VIEWPORT_WIDTH.desktop && <PagesLinks pages={pages} />}
+        {windowWidth >= VIEWPORT_WIDTH.desktop && (
+          <HeaderPLinks pages={pages} />
+        )}
         {isOpen ? (
           <IconButton disabled={true}>
             <CartIcon className={css.cart} />

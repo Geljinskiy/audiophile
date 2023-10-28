@@ -5,13 +5,16 @@
 
   list-style-type: none;
 
-  @include mediaOver('tablet') {
-    gap: 34px;
-  }
+  // @include mediaOver('tablet') {
+  //   gap: 34px;
+  // }
 }
 
 .link {
   display: block;
+  
+  padding-left: 16px;
+  padding-right: 16px;
 
   @extend %sub-title-font;
   text-decoration: none;
@@ -22,7 +25,13 @@
 
   &:hover,
   &:focus,
-  &:active {
+  &__active {
     color: $main-color;
   }
+}
+
+.headerLink {
+  @extend .link;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }

@@ -1,1 +1,2 @@
-export { default as PagesLinks } from './PagesLinks';
+export { default as FooterPLinks } from './FooterPLinks';
+export { default as HeaderPLinks } from './HeaderPLinks';
